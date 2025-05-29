@@ -105,7 +105,7 @@ export function Header() {
           <Link to="/" className="nav-link flex items-center group" onClick={closeMenu}>
             <div className="flex items-center">
               <img
-                src="/SELADOR ACRIL.svg"
+                src="/logo.svg"
                 alt="RevestMais Tintas - Logo"
                 style={{
                   height: "48px",
