@@ -19,7 +19,7 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="text-3xl font-black mb-6">
-              <span className="text-primary">RevestMais</span>
+              <span className="text-primary">Reveste Mais</span>
               <span className="text-secondary">Tintas</span>
             </div>
             <p className="text-gray-300 mb-8 leading-relaxed max-w-md">
@@ -34,7 +34,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-link flex items-center gap-3 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 px-6 py-3 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg group"
-                aria-label="Instagram RevestMais Tintas"
+                aria-label="Instagram RevesteMais Tintas"
               >
                 <Instagram size={20} />
                 <span className="font-semibold">@revestemaistintas</span>
@@ -120,7 +120,7 @@ export function Footer() {
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-400 text-sm">
-              © {currentYear} RevestMais Tintas. Todos os direitos reservados.
+              © {currentYear} Reveste Mais Tintas. Todos os direitos reservados.
             </div>
             <div className="flex items-center gap-2 text-sm text-gray-400">
               <span>Desenvolvido com</span>

@@ -1,3 +1,5 @@
+"use client"
+
 import { Link } from "react-router-dom"
 import {
   Users,
@@ -11,9 +13,26 @@ import {
   MessageCircle,
   ShoppingCart,
   CheckCircle,
+  Play,
+  Pause,
 } from "lucide-react"
+import { useState, useRef } from "react"
 
 export function Home() {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(true)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  const toggleVideo = () => {
+    if (videoRef.current) {
+      if (isVideoPlaying) {
+        videoRef.current.pause()
+      } else {
+        videoRef.current.play()
+      }
+      setIsVideoPlaying(!isVideoPlaying)
+    }
+  }
+
   const features = [
     {
       icon: Users,
@@ -74,7 +93,7 @@ export function Home() {
       role: "Arquiteta Sênior",
       company: "Silva Arquitetura",
       content:
-        "Parceria excepcional! A RevestMais sempre entrega produtos de qualidade superior e o atendimento técnico é impecável. Recomendo para todos os meus projetos.",
+        "Parceria excepcional! A Reveste Mais sempre entrega produtos de qualidade superior e o atendimento técnico é impecável. Recomendo para todos os meus projetos.",
       rating: 5,
       avatar: "👩‍💼",
     },
@@ -83,7 +102,7 @@ export function Home() {
       role: "Engenheiro Civil",
       company: "Construtora Santos",
       content:
-        "Trabalho com a RevestMais há mais de 5 anos. A qualidade dos produtos e a pontualidade nas entregas fazem toda a diferença nos nossos projetos.",
+        "Trabalho com a Reveste Mais há mais de 5 anos. A qualidade dos produtos e a pontualidade nas entregas fazem toda a diferença nos nossos projetos.",
       rating: 5,
       avatar: "👨‍💼",
     },
@@ -177,14 +196,47 @@ export function Home() {
               </div>
             </div>
 
+            {/* Video Section */}
             <div className="relative animate-slide-up">
-              <div className="aspect-ratio-4-3 rounded-3xl overflow-hidden shadow-2xl relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-blue-600/20"></div>
-                <img
-                  src="/placeholder.svg?height=700&width=900"
-                  alt="Loja RevestMais Tintas - Fachada moderna"
+              <div className="aspect-ratio-16-9 rounded-3xl overflow-hidden shadow-2xl relative group">
+                {/* Video Background Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-blue-600/20 z-10"></div>
+
+                {/* Video Element */}
+                <video
+                  ref={videoRef}
                   className="w-full h-full object-cover"
-                />
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  poster="/placeholder.svg?height=700&width=900"
+                >
+                  <source src="/video-loja.mp4" type="video/mp4" />
+                  <source src="/video-loja.webm" type="video/webm" />
+                  {/* Fallback para navegadores que não suportam vídeo */}
+                  <img
+                    src="/placeholder.svg?height=700&width=900"
+                    alt="Loja Reveste Mais Tintas - Fachada moderna"
+                    className="w-full h-full object-cover"
+                  />
+                </video>
+
+                {/* Video Controls Overlay */}
+                <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <button
+                    onClick={toggleVideo}
+                    className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-4 rounded-full transition-all duration-300 hover:scale-110"
+                    aria-label={isVideoPlaying ? "Pausar vídeo" : "Reproduzir vídeo"}
+                  >
+                    {isVideoPlaying ? <Pause size={32} /> : <Play size={32} />}
+                  </button>
+                </div>
+
+                {/* Video Quality Indicator */}
+                <div className="absolute top-4 left-4 z-20 bg-black/50 backdrop-blur-sm px-3 py-1 rounded-full text-white text-xs font-medium">
+                  HD
+                </div>
               </div>
 
               {/* Floating Stats Card */}
@@ -201,7 +253,7 @@ export function Home() {
               </div>
 
               {/* Floating Badge */}
-              <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold text-orange-600 shadow-lg flex items-center gap-2">
+              <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold text-orange-600 shadow-lg flex items-center gap-2 z-30">
                 <Star size={16} className="fill-current" />
                 5.000+ Clientes
               </div>
@@ -342,7 +394,7 @@ export function Home() {
               O que nossos <span className="text-primary">clientes</span> dizem
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Histórias de sucesso de profissionais que confiam na RevestMais
+              Histórias de sucesso de profissionais que confiam na Reveste Mais
             </p>
           </div>
 
@@ -400,7 +452,7 @@ export function Home() {
               </a>
 
               <a
-                href="https://mercadolivre.com.br/revestmais"
+                href="https://mercadolivre.com.br/revestemais"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-outline-white btn-lg group"

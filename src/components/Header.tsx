@@ -106,7 +106,7 @@ export function Header() {
             <div className="flex items-center">
               <img
                 src="/logo.svg"
-                alt="RevestMais Tintas - Logo"
+                alt="Reveste Mais Tintas - Logo"
                 style={{
                   height: "48px",
                   width: "auto",
