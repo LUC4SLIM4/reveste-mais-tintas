@@ -147,7 +147,7 @@ export function Header() {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://wa.me/5534999999999"
+              href="https://wa.me/5534998884410"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary hidden md:inline-flex group"
@@ -190,7 +190,7 @@ export function Header() {
                 </Link>
               ))}
               <a
-                href="https://wa.me/5534999999999"
+                href="https://wa.me/5534998884410"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary mt-4"

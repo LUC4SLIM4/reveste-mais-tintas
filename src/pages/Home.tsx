@@ -144,7 +144,7 @@ export function Home() {
                   <ArrowRight size={20} className="ml-2 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <a
-                  href="https://wa.me/5534999999999"
+                  href="https://wa.me/5534998884410"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline-white btn-lg group"
@@ -389,7 +389,7 @@ export function Home() {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a
-                href="https://wa.me/5534999999999"
+                href="https://wa.me/5534998884410"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-secondary btn-lg group"
