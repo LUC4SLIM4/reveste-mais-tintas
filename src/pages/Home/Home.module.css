@@ -1,0 +1,157 @@
+.home {
+  padding-top: var(--header-height);
+}
+
+.aboutSection {
+  background-color: var(--off-white);
+}
+
+.aboutContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.aboutImage img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.aboutText h2 {
+  font-size: 2.5rem;
+  color: var(--dark-gray);
+  margin-bottom: 1rem;
+}
+
+.aboutSubtitle {
+  font-size: 1.2rem;
+  color: var(--primary);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.aboutText p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.sectionDescription {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  color: var(--gray);
+  font-size: 1.1rem;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.colorsGrid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1.5rem;
+}
+
+.inspirationsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.ctaSection {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.ctaContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ctaContent p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.ctaContent .btn {
+  background-color: var(--white);
+  color: var(--primary);
+  font-size: 1.1rem;
+  padding: 0.75rem 2rem;
+}
+
+.ctaContent .btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 1200px) {
+  .productsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .colorsGrid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .aboutContent {
+    grid-template-columns: 1fr;
+  }
+  
+  .aboutImage {
+    order: 1;
+  }
+  
+  .aboutText {
+    order: 2;
+  }
+  
+  .productsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .colorsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .inspirationsGrid,
+  .blogGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .productsGrid,
+  .inspirationsGrid,
+  .blogGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .colorsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .ctaContent h2 {
+    font-size: 2rem;
+  }
+}

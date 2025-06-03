@@ -1,0 +1,132 @@
+.contactPage {
+  padding-top: var(--header-height);
+}
+
+.heroSection {
+  background-color: var(--off-white);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.heroSection h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--dark-gray);
+}
+
+.heroSection p {
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+
+.contactSection {
+  padding: 4rem 0;
+}
+
+.contactSection .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.contactInfo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark-gray);
+}
+
+.contactInfo p {
+  font-size: 1.1rem;
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+
+.contactInfo strong {
+  font-weight: bold;
+}
+
+.socialLinks {
+  margin-top: 2rem;
+}
+
+.socialLinks a {
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 1.1rem;
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: var(--primary-dark);
+}
+
+.contactForm h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark-gray);
+}
+
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-gray);
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--gray);
+  color: var(--dark-gray);
+}
+
+.formGroup textarea {
+  resize: vertical;
+}
+
+.mapSection {
+  padding: 4rem 0;
+  background-color: var(--light-gray);
+}
+
+.mapSection h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--dark-gray);
+}
+
+.mapContainer {
+  position: relative;
+  padding-bottom: 56.25%; /* Proporção 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.mapContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .contactSection .container {
+    grid-template-columns: 1fr;
+  }
+}

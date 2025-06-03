@@ -1,0 +1,37 @@
+.colorSwatch {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.colorSwatch:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.colorBox {
+  height: 100px;
+  width: 100%;
+}
+
+.colorInfo {
+  padding: 0.75rem;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+.colorName {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  color: var(--dark-gray);
+}
+
+.colorCode {
+  font-size: 0.8rem;
+  color: var(--gray);
+}

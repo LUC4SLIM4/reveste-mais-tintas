@@ -1,0 +1,62 @@
+.colorCatalogPage {
+  padding-top: var(--header-height);
+}
+
+.heroSection {
+  background-color: var(--off-white);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.heroSection h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--dark-gray);
+}
+
+.heroSection p {
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+
+.paletteSection {
+  padding: 4rem 0;
+}
+
+.paletteSection h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--dark-gray);
+}
+
+.paletteSelector {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.paletteSelector label {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  color: var(--dark-gray);
+}
+
+.paletteSelector select {
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--gray);
+  color: var(--dark-gray);
+}
+
+.colorsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .colorsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
