@@ -1,10 +1,10 @@
 // Importando as imagens da pasta assets
-import acrilicaImg from "../assets/acrilica.svg"
-import latexImg from "../assets/latex.svg"
-import decorativaImg from "../assets/decorativa.svg"
-import bambuImg from "../assets/bambu.svg"
-import rendaImg from "../assets/renda.svg"
-import seladorImg from "../assets/SELADOR.svg"
+import acrilicaImg from "/acrilica.svg"
+import latexImg from "/latex.svg"
+import decorativaImg from "/decorativa.svg"
+import bambuImg from "/bambu.svg"
+import rendaImg from "/renda.svg"
+import seladorImg from "/SELADOR.svg"
 
 
 // Categorias de produtos
