@@ -37,7 +37,7 @@ export const productCategories = [
     id: "primer",
     name: "Primer e Selador",
     description: "Produtos preparatórios para melhor aderência e acabamento",
-    image: seladorImg, // ou images.selador
+    image: decorativaImg, // ou images.selador
   },
   {
     id: "verniz",
@@ -255,7 +255,7 @@ export const allProducts = [
     id: 13,
     name: "Primer Preparador Universal",
     shortDescription: "Base perfeita para qualquer tinta",
-    image: seladorImg,
+    image: decorativaImg,
     categoryId: "primer",
     area: "interno",
     finish: "fosco",
@@ -271,7 +271,7 @@ export const allProducts = [
     id: 14,
     name: "Selador Acrílico Concentrado",
     shortDescription: "Máxima penetração e fixação",
-    image: seladorImg,
+    image: decorativaImg,
     categoryId: "primer",
     area: "externo",
     finish: "fosco",
@@ -287,7 +287,7 @@ export const allProducts = [
     id: 15,
     name: "Primer Anti-Mofo",
     shortDescription: "Proteção contra fungos e bactérias",
-    image: seladorImg,
+    image: decorativaImg,
     categoryId: "primer",
     area: "interno",
     finish: "fosco",
