@@ -2,18 +2,18 @@
 // Isso deixa o código mais organizado
 
 // Importar todas as imagens
-import acrilica from "../assets/acrilica.svg"
-import latex from "../assets/latex.svg"
-import decorativa from "../assets/decorativa.svg"
-import economica from "../assets/economica.svg"
-import bambu from "../assets/bambu.svg"
-import pedra from "../assets/pedra.svg"
-import logo from "../assets/logo.svg"
-import renda from "../assets/renda.svg"
-import semi from "../assets/semi.svg"
-import selador from "../assets/SELADOR.svg"
-import superEconom from "../assets/superEconom.svg"
-import video from "../assets/video.svg"
+import acrilica from "/acrilica.svg"
+import latex from "/latex.svg"
+import decorativa from "/decorativa.svg"
+import economica from "/economica.svg"
+import bambu from "/bambu.svg"
+import pedra from "/pedra.svg"
+import logo from "/logo.svg"
+import renda from "/renda.svg"
+import semi from "/semi.svg"
+import selador from "/SELADORACRIL.svg"
+import superEconom from "/superEconom.svg"
+import video from "/video.mp4"
 
 // Exportar como objeto organizado
 export const productImages = {
