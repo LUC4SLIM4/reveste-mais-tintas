@@ -1,61 +1,73 @@
-import React, { useState } from 'react';
-import styles from './PaintingTips.module.css';
-import { recentPosts, blogCategories } from '../../data/blog';
-import BlogPostCard from '../../components/BlogPostCard/BlogPostCard';
+"use client"
+
+import { useState } from "react"
+import { Link } from "react-router-dom"
+import { FiCalendar, FiUser, FiClock } from "react-icons/fi"
+import styles from "./PaintingTips.module.css"
+import { blogPosts} from "../../data/blog"
 
 const PaintingTips = () => {
-  const [selectedCategory, setSelectedCategory] = useState('todos');
+  const [selectedCategory, setSelectedCategory] = useState("todos")
 
-  const handleCategoryChange = (event) => {
-    setSelectedCategory(event.target.value);
-  };
+  // Filtrar posts por categoria
+  const filteredPosts =
+    selectedCategory === "todos"
+      ? blogPosts
+      : blogPosts.filter((post) => post.category.toLowerCase() === selectedCategory.toLowerCase())
 
-  const filteredPosts = selectedCategory === 'todos'
-    ? recentPosts
-    : recentPosts.filter(post => post.category.toLowerCase() === selectedCategory);
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category)
+  }
 
   return (
     <div className={styles.paintingTipsPage}>
-      <section className={`section ${styles.heroSection}`}>
+      {/* Hero Section */}
+
+      {/* Main Content */}
+      <section className={styles.mainContent}>
         <div className="container">
-          <h1>Dicas de Pintura</h1>
-          <p>Confira nossos artigos e tutoriais para um resultado perfeito.</p>
-        </div>
-      </section>
-      
-      <section className={`section ${styles.categoriesSection}`}>
-        <div className="container">
-          <h2>Categorias</h2>
-          <div className={styles.categorySelector}>
-            <label htmlFor="category">Selecione uma categoria:</label>
-            <select id="category" value={selectedCategory} onChange={handleCategoryChange}>
-              {blogCategories.map(category => (
-                <option key={category.id} value={category.id}>{category.name}</option>
-              ))}
-            </select>
+          <div className={styles.resultsHeader}>
+            <h2>Artigos sobre Pintura</h2>
+              <p>
+                Mostrando artigos da categoria{" "}
+              </p>
           </div>
-        </div>
-      </section>
-      
-      <section className={`section ${styles.postsSection}`}>
-        <div className="container">
-          <h2>Artigos Recentes</h2>
+
           <div className={styles.postsGrid}>
-            {filteredPosts.map(post => (
-              <BlogPostCard 
-                key={post.id}
-                image={post.image}
-                title={post.title}
-                excerpt={post.excerpt}
-                date={post.date}
-                link={`/dicas-de-pintura/${post.slug}`}
-              />
+            {filteredPosts.map((post) => (
+              <article key={post.id} className={styles.postCard}>
+                <div className={styles.postImage}>
+                  <img src={post.image || "/placeholder.svg?height=200&width=350"} alt={post.title} />
+                  <div className={styles.postCategory}>{post.category}</div>
+                </div>
+                <div className={styles.postContent}>
+                  <div className={styles.postMeta}>
+                    <span className={styles.postDate}>
+                      <FiCalendar /> {post.date}
+                    </span>
+                    <span className={styles.postReadTime}>
+                      <FiClock /> {post.readTime}
+                    </span>
+                  </div>
+                  <h3 className={styles.postTitle}>{post.title}</h3>
+                  <p className={styles.postExcerpt}>{post.excerpt}</p>
+                  <div className={styles.postFooter}>
+                    <div className={styles.postAuthor}>
+                      <FiUser />
+                      <span>{post.author}</span>
+                    </div>
+                    <Link to={`/blog/${post.slug}`} className={styles.readMore}>
+                      Ler Mais
+                    </Link>
+                  </div>
+                </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default PaintingTips;
+export default PaintingTips

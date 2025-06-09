@@ -4,13 +4,11 @@ import styles from './Home.module.css';
 import HeroBanner from '../../components/HeroBanner/HeroBanner';
 import ProductCard from '../../components/ProductCard/ProductCard';
 import ColorSwatch from '../../components/ColorSwatch/ColorSwatch';
-import InspirationCard from '../../components/InspirationCard/InspirationCard';
 import BlogPostCard from '../../components/BlogPostCard/BlogPostCard';
-import { featuredProducts } from '../../data/products';
+import { productCategories } from '../../data/products';
 import { popularColors } from '../../data/colors';
-import { featuredInspirations } from '../../data/inspirations';
-import { recentPosts } from '../../data/blog';
-import videoLoja from '../../assets/video-loja.mp4';
+import { blogPosts } from '../../data/blog';
+import videoLoja from '/video.mp4';
 
 const Home = () => {
   return (
@@ -55,7 +53,7 @@ const Home = () => {
           </p>
           
           <div className={styles.productsGrid}>
-            {featuredProducts.map(product => (
+            {productCategories.slice(0,4).map(product => (
               <ProductCard 
                 key={product.id}
                 image={product.image}
@@ -96,31 +94,6 @@ const Home = () => {
         </div>
       </section>
       
-      <section className={`section ${styles.inspirationsSection}`}>
-        <div className="container">
-          <h2 className="section-title">Inspirações</h2>
-          <p className={styles.sectionDescription}>
-            Ambientes transformados com as cores Reveste Mais
-          </p>
-          
-          <div className={styles.inspirationsGrid}>
-            {featuredInspirations.slice(0, 3).map(inspiration => (
-              <InspirationCard 
-                key={inspiration.id}
-                image={inspiration.image}
-                title={inspiration.title}
-                category={inspiration.category}
-                link={`/inspiracoes/${inspiration.id}`}
-              />
-            ))}
-          </div>
-          
-          <div className="text-center mt-4">
-            <Link to="/inspiracoes" className="btn btn-outline">Ver mais inspirações</Link>
-          </div>
-        </div>
-      </section>
-      
       <section className={`section ${styles.blogSection}`}>
         <div className="container">
           <h2 className="section-title">Dicas de Pintura</h2>
@@ -129,7 +102,7 @@ const Home = () => {
           </p>
           
           <div className={styles.blogGrid}>
-            {recentPosts.slice(0, 3).map(post => (
+            {blogPosts.slice(0, 3).map(post => (
               <BlogPostCard 
                 key={post.id}
                 image={post.image}

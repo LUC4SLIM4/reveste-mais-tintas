@@ -74,15 +74,6 @@ const Header = () => {
             </li>
             <li className={styles.navItem}>
               <NavLink 
-                to="/inspiracoes" 
-                className={({ isActive }) => isActive ? styles.activeLink : ''}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Inspirações
-              </NavLink>
-            </li>
-            <li className={styles.navItem}>
-              <NavLink 
                 to="/dicas-de-pintura" 
                 className={({ isActive }) => isActive ? styles.activeLink : ''}
                 onClick={() => setIsMenuOpen(false)}
