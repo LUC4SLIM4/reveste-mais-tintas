@@ -4,7 +4,7 @@ import latexImg from "/latex.svg"
 import decorativaImg from "/decorativa.svg"
 import bambuImg from "/bambu.svg"
 import rendaImg from "/renda.svg"
-import seladorImg from "/SELADOR.svg"
+
 
 
 // Categorias de produtos
