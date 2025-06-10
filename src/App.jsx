@@ -9,10 +9,12 @@ import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
 import BlogPost from './pages/BlogPost/BlogPost';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
     <div className="app">
+      <ScrollToTop/>
       <Header />
       <main>
         <Routes>

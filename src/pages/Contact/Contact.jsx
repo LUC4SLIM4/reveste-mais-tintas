@@ -25,7 +25,7 @@ const Contact = () => {
   }
 
   const validateForm = () => {
-    const { name, email, subject, message } = formData
+    const { name, email, phone, subject, message } = formData
 
     if (!name.trim()) {
       setStatus({ type: "error", message: "Nome é obrigatório." })
@@ -45,6 +45,11 @@ const Contact = () => {
 
     if (!subject.trim()) {
       setStatus({ type: "error", message: "Assunto é obrigatório." })
+      return false
+    }
+
+    if (!phone.trim()) {
+      setStatus({ type: "error", message: "Telefone é obrigatório." })
       return false
     }
 
@@ -68,9 +73,9 @@ const Contact = () => {
 
     try {
       // Configurações do EmailJS - SUBSTITUA pelos seus valores reais
-      const serviceId = "service_revestemais" // Seu Service ID
-      const templateId = "template_contato" // Seu Template ID
-      const publicKey = "YOUR_PUBLIC_KEY" // Sua Public Key
+      const serviceId = "service_stoepxw" // Seu Service ID
+      const templateId = "template_wirx0nl" // Seu Template ID
+      const publicKey = "3OqDlkKNQ6tVAAHkA" // Sua Public Key
 
       // Obter data e hora atual formatada
       const now = new Date()
@@ -87,7 +92,7 @@ const Contact = () => {
       const templateParams = {
         name: formData.name.trim(),
         email: formData.email.trim(),
-        phone: formData.phone.trim() || "Não informado",
+        phone: formData.phone.trim(),
         subject: formData.subject.trim(),
         message: formData.message.trim(),
         time: timeFormatted,
@@ -163,9 +168,9 @@ const Contact = () => {
                 <i className="fas fa-map-marker-alt"></i>
               </div>
               <h3>Endereço</h3>
-              <p>Av. das Tintas, 1234</p>
-              <p>Bairro Colorido</p>
-              <p>Cidade/UF, 12345-678</p>
+              <p>Av. Deputado Binga, 682</p>
+              <p>Bairro Nossa Senhora de Fátima</p>
+              <p>Patos de Minas/MG, 38701-682</p>
             </div>
 
             <div className={styles.contactCard}>
@@ -173,8 +178,8 @@ const Contact = () => {
                 <i className="fas fa-phone"></i>
               </div>
               <h3>Telefone</h3>
-              <p>(11) 1234-5678</p>
-              <p>(11) 9876-5432</p>
+              <p>(34) 3822-4410</p>
+              <p>(34) 9888-4410</p>
               <p>WhatsApp disponível</p>
             </div>
 
@@ -183,9 +188,8 @@ const Contact = () => {
                 <i className="fas fa-envelope"></i>
               </div>
               <h3>Email</h3>
-              <p>contato@revestemais.com.br</p>
-              <p>vendas@revestemais.com.br</p>
-              <p>suporte@revestemais.com.br</p>
+              <p>revestemaispatos@gmail.com</p>
+              <p>revestemais@outlook.com</p>
             </div>
 
             <div className={styles.contactCard}>
@@ -193,9 +197,9 @@ const Contact = () => {
                 <i className="fas fa-clock"></i>
               </div>
               <h3>Horário de Funcionamento</h3>
-              <p>Segunda à Sexta: 08:00 às 18:00</p>
-              <p>Sábado: 08:00 às 12:00</p>
-              <p>Domingo: Fechado</p>
+              <p>Segunda à Quinta: 07:00 às 17:00</p>
+              <p>Sexta: 07:00 às 16:00</p>
+              <p>Sábado e Domingo: Fechado</p>
             </div>
           </div>
 
@@ -233,7 +237,7 @@ const Contact = () => {
                       type="tel"
                       id="phone"
                       name="phone"
-                      placeholder="Telefone (opcional)"
+                      placeholder="Telefone"
                       value={formData.phone}
                       onChange={handleInputChange}
                       disabled={isLoading}

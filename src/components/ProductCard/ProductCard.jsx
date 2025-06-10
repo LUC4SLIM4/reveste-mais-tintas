@@ -107,12 +107,6 @@ Gostaria de mais informações sobre este produto.`
                 <span>Mercado Livre</span>
               </button>
             )}
-
-            {/* Botão Ver Detalhes (opcional) */}
-            <Link to={link} className={`${styles.actionButton} ${styles.detailsButton}`}>
-              <ExternalLink size={16} />
-              <span>Detalhes</span>
-            </Link>
           </div>
         </div>
       </div>

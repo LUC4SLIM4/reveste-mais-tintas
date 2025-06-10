@@ -61,37 +61,37 @@ const About = () => {
   const differentials = [
     {
       icon: <FiShield />,
-      title: "Qualidade Garantida",
+      title: "Fabricação Própria",
       description:
-        "Todos os nossos produtos passam por rigorosos testes de qualidade em laboratórios certificados. Utilizamos apenas matérias-primas premium de fornecedores selecionados, garantindo durabilidade e performance superior em cada lata de tinta.",
+        "Desde o início, optamos por produzir nossos próprios produtos, garantindo controle total sobre a qualidade, os processos e os prazos. Isso nos permite oferecer tintas e revestimentos com alto padrão técnico, adaptados às necessidades do nosso público.",
       image: "/placeholder.svg?height=250&width=350",
     },
     {
       icon: <FiUsers />,
-      title: "Atendimento Especializado",
+      title: "Atendimento Humanizado",
       description:
-        "Nossa equipe técnica é formada por profissionais com mais de 10 anos de experiência no setor. Oferecemos consultoria gratuita para escolha de cores, tipos de tinta e técnicas de aplicação, garantindo o sucesso do seu projeto.",
+        "Nossa equipe é treinada para oferecer um atendimento próximo, atencioso e personalizado. Valorizamos cada cliente e buscamos entender seu projeto para oferecer as melhores soluções com empatia, clareza e comprometimento.",
       image: "/placeholder.svg?height=250&width=350",
     },
     {
       icon: <FiTrendingUp />,
-      title: "Inovação Constante",
+      title: "Presença Regional Forte",
       description:
-        "Investimos 15% do nosso faturamento em pesquisa e desenvolvimento. Nosso laboratório de P&D trabalha continuamente no desenvolvimento de novas fórmulas, cores e tecnologias para atender às necessidades futuras do mercado.",
+        "Com sede em Patos de Minas e filial em Tiros, ampliamos nossa atuação no Alto Paranaíba com agilidade logística e profundo conhecimento do mercado local. Atendemos com eficiência tanto consumidores finais quanto empresas da construção civil.",
       image: "/placeholder.svg?height=250&width=350",
     },
     {
       icon: <FiHeart />,
-      title: "Paixão por Cores",
+      title: "Compromisso com a Qualidade",
       description:
-        "Mais do que um negócio, as cores são nossa paixão. Cada produto é desenvolvido pensando no impacto emocional e estético que as cores causam nos ambientes, transformando casas em lares e espaços comerciais em experiências únicas.",
+        "Selecionamos cuidadosamente nossas matérias-primas e seguimos rigorosos padrões de produção. Cada lote passa por controle interno de qualidade para garantir desempenho, aderência, cobertura e durabilidade superiores.",
       image: "/placeholder.svg?height=250&width=350",
     },
     {
       icon: <FiAward />,
-      title: "Reconhecimento do Mercado",
+      title: "Soluções para Ambientes Internos e Externos",
       description:
-        "Fomos premiados como 'Melhor Marca de Tintas da Região' por três anos consecutivos. Nossos produtos são especificados por arquitetos e designers renomados, sendo referência em qualidade e inovação no setor.",
+        "Desenvolvemos produtos específicos para diferentes superfícies e ambientes. Nossas tintas e revestimentos são indicados tanto para áreas internas quanto externas, oferecendo proteção, acabamento impecável e estética de alto impacto.",
       image: "/placeholder.svg?height=250&width=350",
     },
   ]
@@ -214,24 +214,29 @@ const About = () => {
             <div className={styles.storyText}>
               <h2>Nossa História</h2>
               <p>
-                A Reveste Mais Tintas nasceu em 2008 do sonho de João Silva, um engenheiro químico apaixonado por cores
-                e inovação. Tudo começou em uma pequena loja de 50m² no centro da cidade, com apenas três funcionários e
-                uma visão clara: democratizar o acesso a tintas de alta qualidade.
+                A Reveste Mais Tintas nasceu em 2013 do sonho de duas empreendedoras mineiras,
+                Patrícia Emiliane e Roberta Lívia, determinadas a transformar o mercado de tintas com produtos
+                de qualidade e atendimento diferenciado. Tudo começou em Patos de Minas, em uma estrutura
+                modesta, mas com um propósito ousado: fabricar tintas acrílicas que unissem tecnologia,
+                durabilidade e beleza.
               </p>
               <p>
-                Nos primeiros anos, enfrentamos desafios típicos de uma startup. Competir com grandes marcas
-                estabelecidas não era fácil, mas nossa estratégia de focar na qualidade do produto e no atendimento
-                personalizado começou a dar frutos. Cada cliente satisfeito se tornava um embaixador da marca.
+                Nos primeiros anos, os desafios foram grandes. Enfrentar concorrentes consolidados exigiu
+                resiliência e visão estratégica. Apostamos na fabricação própria, no relacionamento próximo
+                com os clientes e no compromisso com a excelência em cada produto entregue. Aos poucos,
+                conquistamos a confiança do mercado regional.
               </p>
               <p>
-                O ponto de virada veio em 2012, quando decidimos investir pesado em pesquisa e desenvolvimento.
-                Contratamos nossa primeira química especializada e montamos um laboratório próprio. Isso nos permitiu
-                desenvolver fórmulas exclusivas e inovar constantemente.
+                O grande marco veio em 2018, com a abertura da nossa primeira filial na cidade de Tiros-MG.
+                Esse passo foi fundamental para expandir nossa presença e reafirmar nosso propósito de levar
+                mais cor e qualidade para os lares e obras da região.
               </p>
               <p>
-                Hoje, 15 anos depois, somos uma empresa consolidada com mais de 80 colaboradores, uma fábrica moderna e
-                uma rede de distribuição que atende toda a região. Mas nossa essência permanece a mesma: paixão por
-                cores e compromisso com a excelência.
+                Hoje, mais de uma década depois, a Reveste Mais é reconhecida como referência na fabricação
+                de tintas e revestimentos acrílicos, com uma estrutura sólida, produção local e uma equipe
+                comprometida com o que faz. Mas nossa essência continua a mesma: acreditar que cada parede
+                pintada pode contar uma história — e a nossa é feita de dedicação, inovação e paixão pelas
+                cores.
               </p>
             </div>
             <div className={styles.storyImage}>
@@ -252,9 +257,10 @@ const About = () => {
               </div>
               <h3>Missão</h3>
               <p>
-                Inspirar e transformar ambientes através de cores e soluções inovadoras, oferecendo produtos de alta
-                qualidade e um atendimento diferenciado que supere as expectativas de nossos clientes, contribuindo para
-                a criação de espaços mais belos e acolhedores.
+                Produzir e comercializar tintas e revestimentos com excelência, oferecendo soluções
+                que unem qualidade, durabilidade e beleza. Valorizamos o atendimento próximo e confiável,
+                buscando sempre superar as expectativas dos nossos clientes e contribuir para a
+                transformação de ambientes com cor, segurança e tecnologia.
               </p>
             </div>
             <div className={styles.valueCard}>
@@ -263,9 +269,10 @@ const About = () => {
               </div>
               <h3>Visão</h3>
               <p>
-                Ser a marca de tintas e revestimentos preferida pelos clientes na região Sudeste até 2030, reconhecida
-                pela excelência em qualidade, inovação tecnológica e compromisso com a sustentabilidade, expandindo
-                nossa presença nacional de forma responsável.
+                Ser referência em tintas e revestimentos no estado de Minas Gerais até 2030, 
+                reconhecida pela fabricação própria, atendimento humanizado e compromisso com a 
+                inovação. Expandir nossa atuação no interior mineiro com responsabilidade e qualidade,
+                fortalecendo parcerias duradouras e sustentáveis.
               </p>
             </div>
             <div className={styles.valueCard}>
@@ -276,11 +283,11 @@ const About = () => {
               <div className={styles.valuesList}>
                 <div className={styles.valueItem}>
                   <FiCheckCircle />
-                  <span>Qualidade sem compromissos</span>
+                  <span>Qualidade em cada detalhe</span>
                 </div>
                 <div className={styles.valueItem}>
                   <FiCheckCircle />
-                  <span>Inovação constante</span>
+                  <span>Inovação com propósito</span>
                 </div>
                 <div className={styles.valueItem}>
                   <FiCheckCircle />
@@ -288,15 +295,15 @@ const About = () => {
                 </div>
                 <div className={styles.valueItem}>
                   <FiCheckCircle />
-                  <span>Sustentabilidade ambiental</span>
+                  <span>Responsabilidade ambiental</span>
                 </div>
                 <div className={styles.valueItem}>
                   <FiCheckCircle />
-                  <span>Ética e transparência</span>
+                  <span>Ética e integridade</span>
                 </div>
                 <div className={styles.valueItem}>
                   <FiCheckCircle />
-                  <span>Responsabilidade social</span>
+                  <span>Valorização da comunidade</span>
                 </div>
               </div>
             </div>
@@ -310,8 +317,8 @@ const About = () => {
           <div className={styles.sectionHeader}>
             <h2>Nossos Diferenciais</h2>
             <p>
-              Descubra o que nos torna únicos no mercado de tintas e por que somos a escolha preferida de milhares de
-              clientes
+              Descubra o que torna a Reveste Mais única e por que somos referência em tintas e 
+              revestimentos acrílicos no interior de Minas Gerais.
             </p>
           </div>
 
@@ -336,8 +343,12 @@ const About = () => {
       <section className={styles.timelineSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <h2>Nossa Trajetória</h2>
-            <p>Uma jornada de crescimento, inovação e conquistas que nos trouxe até aqui</p>
+            <h2>Fabricação Própria</h2>
+            <p>
+              Desde o início, optamos por produzir nossos próprios produtos, garantindo controle 
+              total sobre a qualidade, os processos e os prazos. Isso nos permite oferecer tintas 
+              e revestimentos com alto padrão técnico, adaptados às necessidades do nosso público.
+            </p>
           </div>
 
           <div className={styles.timelineContainer}>
@@ -364,10 +375,11 @@ const About = () => {
       <section className={styles.sustainabilitySection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <h2>Compromisso com a Sustentabilidade</h2>
+            <h2>Atendimento Humanizado</h2>
             <p>
-              Acreditamos que é possível criar produtos excepcionais respeitando o meio ambiente. Conheça nossas
-              iniciativas sustentáveis e como estamos construindo um futuro mais verde.
+              Nossa equipe é treinada para oferecer um atendimento próximo, atencioso e personalizado.
+              Valorizamos cada cliente e buscamos entender seu projeto para oferecer as melhores 
+              soluções com empatia, clareza e comprometimento.
             </p>
           </div>
 

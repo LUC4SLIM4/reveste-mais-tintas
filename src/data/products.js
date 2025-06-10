@@ -5,8 +5,6 @@ import decorativaImg from "/decorativa.svg"
 import bambuImg from "/bambu.svg"
 import rendaImg from "/renda.svg"
 
-
-
 // Categorias de produtos
 export const productCategories = [
   {
@@ -385,6 +383,50 @@ export const allProducts = [
   },
 ]
 
+// Função para normalizar texto (remover acentos e converter para minúsculas)
+const normalizeText = (text) => {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^\w\s]/gi, "")
+}
+
+// Função para calcular a similaridade entre duas strings (algoritmo de Levenshtein simplificado)
+const calculateSimilarity = (str1, str2) => {
+  // Para strings muito curtas, exigimos correspondência exata
+  if (str1.length <= 3 || str2.length <= 3) {
+    return str1 === str2
+  }
+
+  // Para strings mais longas, permitimos algumas diferenças
+  const distance = 0
+  const maxDistance = Math.floor(Math.max(str1.length, str2.length) * 0.3) // 30% de tolerância
+
+  // Implementação simplificada para verificar similaridade
+  // Verifica se uma string contém a outra ou se são muito similares
+  if (str1.includes(str2) || str2.includes(str1)) {
+    return true
+  }
+
+  // Verifica palavras individuais
+  const words1 = str1.split(" ")
+  const words2 = str2.split(" ")
+
+  // Se alguma palavra corresponder, consideramos uma correspondência
+  for (const word1 of words1) {
+    if (word1.length <= 2) continue // Ignora palavras muito curtas
+    for (const word2 of words2) {
+      if (word2.length <= 2) continue
+      if (word1.includes(word2) || word2.includes(word1)) {
+        return true
+      }
+    }
+  }
+
+  return false
+}
+
 // Função para buscar produtos por categoria
 export const getProductsByCategory = (categoryId) => {
   return allProducts.filter((product) => product.categoryId === categoryId)
@@ -395,17 +437,31 @@ export const getProductById = (id) => {
   return allProducts.find((product) => product.id === Number.parseInt(id))
 }
 
-// Função para buscar produtos por filtros
+// Função para buscar produtos por filtros com busca melhorada
 export const getFilteredProducts = (filters) => {
   return allProducts.filter((product) => {
     const matchesCategory = !filters.category || product.categoryId === filters.category
     const matchesArea = !filters.area || product.area === filters.area
     const matchesFinish = !filters.finish || product.finish === filters.finish
     const matchesColor = !filters.color || product.color === filters.color
-    const matchesSearch =
-      !filters.search ||
-      product.name.toLowerCase().includes(filters.search.toLowerCase()) ||
-      product.shortDescription.toLowerCase().includes(filters.search.toLowerCase())
+
+    // Busca melhorada com normalização de texto e tolerância a erros
+    let matchesSearch = true
+    if (filters.search && filters.search.trim()) {
+      const searchNormalized = normalizeText(filters.search)
+      const nameNormalized = normalizeText(product.name)
+      const descNormalized = normalizeText(product.shortDescription || "")
+      const brandNormalized = normalizeText(product.brand || "")
+      const categoryName = productCategories.find((c) => c.id === product.categoryId)?.name || ""
+      const categoryNormalized = normalizeText(categoryName)
+
+      // Verifica se o termo de busca corresponde ao nome, descrição, marca ou categoria
+      matchesSearch =
+        calculateSimilarity(nameNormalized, searchNormalized) ||
+        calculateSimilarity(descNormalized, searchNormalized) ||
+        calculateSimilarity(brandNormalized, searchNormalized) ||
+        calculateSimilarity(categoryNormalized, searchNormalized)
+    }
 
     return matchesCategory && matchesArea && matchesFinish && matchesColor && matchesSearch
   })

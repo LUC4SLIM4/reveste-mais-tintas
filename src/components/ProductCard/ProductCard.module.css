@@ -166,12 +166,12 @@
 }
 
 .mercadoLivreButton {
-  background-color: #3483fa;
+  background-color: #d4c116;
   color: white;
 }
 
 .mercadoLivreButton:hover {
-  background-color: #2968c8;
+  background-color: #c9b500;
   color: white;
   text-decoration: none;
 }

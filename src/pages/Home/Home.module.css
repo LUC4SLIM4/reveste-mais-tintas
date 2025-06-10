@@ -1,9 +1,12 @@
 .home {
-  padding-top: var(--header-height);
+  /* Remove o padding-top para permitir que o vídeo ocupe toda a tela */
+  padding-top: 0;
 }
 
 .aboutSection {
   background-color: var(--off-white);
+  /* Adiciona padding-top apenas para as seções após o hero */
+  padding-top: calc(var(--section-padding) + 2rem);
 }
 
 .aboutContent {
@@ -107,7 +110,7 @@
   .productsGrid {
     grid-template-columns: repeat(3, 1fr);
   }
-  
+
   .colorsGrid {
     grid-template-columns: repeat(6, 1fr);
   }
@@ -117,23 +120,23 @@
   .aboutContent {
     grid-template-columns: 1fr;
   }
-  
+
   .aboutImage {
     order: 1;
   }
-  
+
   .aboutText {
     order: 2;
   }
-  
+
   .productsGrid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .colorsGrid {
     grid-template-columns: repeat(4, 1fr);
   }
-  
+
   .inspirationsGrid,
   .blogGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -146,11 +149,11 @@
   .blogGrid {
     grid-template-columns: 1fr;
   }
-  
+
   .colorsGrid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .ctaContent h2 {
     font-size: 2rem;
   }

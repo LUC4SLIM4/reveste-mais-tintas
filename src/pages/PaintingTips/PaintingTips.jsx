@@ -25,13 +25,13 @@ const PaintingTips = () => {
 
       {/* Main Content */}
       <section className={styles.mainContent}>
-        <div className="container">
           <div className={styles.resultsHeader}>
             <h2>Artigos sobre Pintura</h2>
               <p>
                 Mostrando artigos da categoria{" "}
               </p>
           </div>
+        <div className="container">
 
           <div className={styles.postsGrid}>
             {filteredPosts.map((post) => (
