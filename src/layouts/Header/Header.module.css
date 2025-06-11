@@ -157,8 +157,6 @@
 .transparent {
   background-color: transparent;
   box-shadow: none;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
 .transparent .logo {

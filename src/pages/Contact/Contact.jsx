@@ -314,7 +314,7 @@ const Contact = () => {
 
               <div className={styles.mapWrapper}>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.797974543484!2d-46.65879458507176!3d-23.54009708468772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5843deade6e3%3A0x874459ff6a942bc5!2sAvenida%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1627913465991!5m2!1spt-BR!2sbr"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.315982733785!2d-46.533836224105656!3d-18.559787797108964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94aef4bc0161824f%3A0xb8c2fa81a685b686!2sReveste%20Mais%20Tintas!5e0!3m2!1spt-BR!2sbr!4v1749642406288!5m2!1spt-BR!2sbr"
                   width="600"
                   height="450"
                   style={{ border: 0 }}

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 import logo from '/logo.svg';
+import reliveLogo from '/relive.png'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -41,15 +42,15 @@ const Footer = () => {
               <ul className={styles.contactInfo}>
                 <li>
                   <i className="fas fa-map-marker-alt"></i>
-                  <span>Av. das Tintas, 1234<br />Bairro Colorido - Cidade/UF</span>
+                  <span>Av. Deputado Binga, 682<br />Bairro Nossa Senhora de Fátima - Patos de Minas/MG</span>
                 </li>
                 <li>
                   <i className="fas fa-phone"></i>
-                  <span>(11) 1234-5678</span>
+                  <span>(34) 9888-4410</span>
                 </li>
                 <li>
                   <i className="fas fa-envelope"></i>
-                  <span>contato@revestemais.com.br</span>
+                  <span>revestemaispatos@gmail.com</span>
                 </li>
               </ul>
             </div>
@@ -58,17 +59,14 @@ const Footer = () => {
           <div className={styles.footerSocial}>
             <h3>Siga-nos</h3>
             <div className={styles.socialIcons}>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <a href="https://www.facebook.com/revestemaistintas/?locale=pt_BR" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a href="https://www.instagram.com/revestemaistintas/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                <i className="fab fa-youtube"></i>
-              </a>
-              <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
-                <i className="fab fa-pinterest-p"></i>
+              <a href="https://wa.me/553498884410" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <i className="fab fa-whatsapp"></i>
               </a>
             </div>
           </div>
@@ -76,6 +74,13 @@ const Footer = () => {
         
         <div className={styles.footerBottom}>
           <p>&copy; {currentYear} Reveste Mais Tintas. Todos os direitos reservados.</p>
+          <div className="developer-info">
+            Desenvolvido por:&nbsp;
+            <a href="https://cropsight.netlify.app/" target="_blank" rel="noopener noreferrer">
+              CropSight Solutions
+              <img src={reliveLogo} width={20} alt="Developer Company" className="developer-logo" />
+            </a>
+          </div>
           <div className={styles.footerBottomLinks}>
             <a href="#">Política de Privacidade</a>
             <span>|</span>

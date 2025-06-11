@@ -1,12 +1,12 @@
 .home {
-  /* Remove o padding-top para permitir que o vídeo ocupe toda a tela */
+  /* Agora com padding-top para compensar o header */
   padding-top: 0;
 }
 
 .aboutSection {
   background-color: var(--off-white);
-  /* Adiciona padding-top apenas para as seções após o hero */
-  padding-top: calc(var(--section-padding) + 2rem);
+  /* Remove o padding-top extra já que o HeroBanner agora tem espaçamento próprio */
+  padding-top: var(--section-padding);
 }
 
 .aboutContent {
@@ -44,15 +44,18 @@
 .sectionDescription {
   text-align: center;
   max-width: 700px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2rem;
   color: var(--gray);
   font-size: 1.1rem;
 }
 
-.productsGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+.productsSection {
+  padding: 3rem 0;
+}
+
+.productsSection .container-fluid {
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 .colorsGrid {
@@ -107,10 +110,6 @@
 }
 
 @media (max-width: 1200px) {
-  .productsGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .colorsGrid {
     grid-template-columns: repeat(6, 1fr);
   }
@@ -129,10 +128,6 @@
     order: 2;
   }
 
-  .productsGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .colorsGrid {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -144,7 +139,6 @@
 }
 
 @media (max-width: 576px) {
-  .productsGrid,
   .inspirationsGrid,
   .blogGrid {
     grid-template-columns: 1fr;

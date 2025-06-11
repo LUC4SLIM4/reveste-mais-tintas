@@ -15,24 +15,24 @@ import styles from "./About.module.css"
 const About = () => {
   const timelineEvents = [
     {
-      year: "2008",
+      year: "2013",
       title: "Fundação da Reveste Mais Tintas",
       description:
-        "Iniciamos nossa jornada com uma pequena loja e o sonho de transformar ambientes através das cores. Com apenas 3 funcionários e uma linha básica de tintas, começamos a construir nossa reputação baseada na qualidade e atendimento personalizado.",
+        "A Reveste Mais Tintas e Revestimentos Acrílicos Ltda. foi fundada em Patos de Minas (MG) em 14 de junho de 2013 . Desde a abertura já é registrada como microempresa, atuando na fabricação de tintas e revestimentos acrílicos para pintura residencial e comercial.",
       image: "/placeholder.svg?height=300&width=400",
     },
     {
-      year: "2012",
-      title: "Expansão da Linha de Produtos",
+      year: "2018",
+      title: "Filial em Tiros",
       description:
-        "Lançamos nossa primeira linha de tintas para uso externo e industrial, atendendo à crescente demanda do mercado. Investimos em tecnologia e ampliamos nossa equipe para 15 colaboradores, consolidando nossa presença no mercado regional.",
+        "Em 27 de agosto de 2018, a Reveste Mais inaugurou sua primeira filial fora de Patos de Minas, no município de Tiros (MG). Essa expansão física ampliou a atuação da empresa no Triângulo Mineiro.",
       image: "/placeholder.svg?height=300&width=400",
     },
     {
-      year: "2015",
-      title: "Certificação ISO 9001",
+      year: "2021",
+      title: "Renovação de Licença",
       description:
-        "Conquistamos a certificação ISO 9001, reconhecendo nosso compromisso com a gestão da qualidade. Este marco representou um salto em nossos processos produtivos e controle de qualidade, garantindo ainda mais confiança aos nossos clientes.",
+        "Em 17 de novembro de 2021 a Reveste Mais obteve a renovação de sua Licença Ambiental Simplificada (LAS) para operação industrial. Essa licença concedida pelo órgão ambiental de Minas Gerais renova a autorização para fabricação de produtos químicos (tintas e revestimentos) e é válida por 10 anos, reforçando o compromisso da empresa com normas ambientais.",
       image: "/placeholder.svg?height=300&width=400",
     },
     {

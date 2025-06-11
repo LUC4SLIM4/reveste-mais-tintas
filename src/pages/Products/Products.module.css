@@ -3,7 +3,7 @@
 }
 
 .heroSection {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background-color: var(--off-white);
   padding: 5rem 0;
   text-align: center;
 }
@@ -304,10 +304,10 @@
 
 /* Estilos para garantir que as imagens tenham tamanho consistente */
 .productCardWrapper img {
-  width: 100%;
-  height: 200px; /* Altura fixa para todas as imagens */
-  object-fit: contain; /* Mantém a proporção da imagem sem cortar */
-  background-color: #f8f9fa; /* Fundo claro para imagens transparentes */
+  width: 200px !important;
+  height: 200px !important;
+  object-fit: contain;
+  background-color: #f8f9fa;
   border-radius: var(--border-radius-sm);
   transition: transform 0.3s ease;
 }
@@ -316,11 +316,12 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative; /* Importante para posicionamento relativo */
 }
 
 .productCard img {
-  width: 100%;
-  height: 200px;
+  width: 200px !important;
+  height: 200px !important;
   object-fit: contain;
   background-color: #f8f9fa;
   border-radius: var(--border-radius-sm);
@@ -328,7 +329,7 @@
 }
 
 .productImageContainer {
-  width: 100%;
+  width: 200px;
   height: 200px;
   display: flex;
   align-items: center;
@@ -336,7 +337,37 @@
   overflow: hidden;
   background-color: #f8f9fa;
   border-radius: var(--border-radius-sm);
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem auto;
+  flex-shrink: 0;
+}
+
+/* Correção para os botões de WhatsApp e Mercado Livre */
+.productCard .whatsappButton,
+.productCard .mercadoLivreButton {
+  width: 36px !important;
+  height: 36px !important;
+  position: relative !important;
+  z-index: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  flex-shrink: 0 !important;
+}
+
+.productCard .whatsappButton {
+  background-color: #25d366 !important;
+  color: white !important;
+}
+
+.productCard .mercadoLivreButton {
+  background-color: #ffe600 !important;
+  color: #333 !important;
+}
+
+.productCard .whatsappButton i,
+.productCard .mercadoLivreButton i {
+  font-size: 1rem !important;
 }
 
 .noProducts {
