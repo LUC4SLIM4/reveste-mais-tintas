@@ -1,5 +1,21 @@
+/* Adicionar no início do arquivo */
+* {
+  box-sizing: border-box;
+}
+
 .productsPage {
   padding-top: var(--header-height);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Ajustar o container principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .heroSection {
@@ -122,13 +138,18 @@
 /* Container principal de produtos */
 .productsContainer {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-top: 2rem;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* Sidebar de filtros */
 .filterSidebar {
-  width: 280px;
+  width: 250px;
+  min-width: 250px;
   flex-shrink: 0;
   background-color: var(--white);
   border-radius: var(--border-radius-md);
@@ -222,10 +243,17 @@
 /* Conteúdo principal */
 .mainContent {
   flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
 
 .productsSection {
-  padding: 1rem 0 4rem 0; /* Reduzir padding superior */
+  padding: 1rem 0 4rem 0;
+  width: 100%;
+  max-width: 900px;
 }
 
 .productsHeader {
@@ -233,6 +261,9 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2rem;
+  text-align: center;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .productsHeader h2 {
@@ -290,8 +321,11 @@
 
 .productsGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  width: 100%;
+  max-width: 100%;
 }
 
 .productsGrid.listView {
@@ -392,16 +426,32 @@
   font-size: 0.9rem;
 }
 
-/* Responsividade */
+/* Responsividade atualizada */
 @media (max-width: 1200px) {
   .productsGrid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 800px;
+  }
+
+  .filterSidebar {
+    width: 220px;
+    min-width: 220px;
   }
 }
 
 @media (max-width: 992px) {
+  .productsContainer {
+    gap: 1rem;
+  }
+
   .productsGrid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    max-width: 600px;
+  }
+
+  .filterSidebar {
+    width: 200px;
+    min-width: 200px;
   }
 }
 
@@ -412,7 +462,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    max-width: 320px;
+    max-width: 300px;
     z-index: 100;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
@@ -434,10 +484,17 @@
 
   .productsGrid {
     grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   .productsContainer {
     flex-direction: column;
+    padding: 0;
+  }
+
+  .mainContent {
+    padding: 0 1rem;
   }
 }
 

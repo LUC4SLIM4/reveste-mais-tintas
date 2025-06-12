@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
-import logo from '/logo.svg';
+import REVESTEMAIS from '/REVESTEMAIS.png';
 import reliveLogo from '/relive.png'
 
 const Footer = () => {
@@ -12,7 +12,7 @@ const Footer = () => {
         <div className={styles.footerContent}>
           <div className={styles.footerLogo}>
             <Link to="/">
-              <img src={logo} alt="Reveste Mais Tintas" />
+              <img src={REVESTEMAIS} alt="Reveste Mais Tintas" />
             </Link>
             <p className={styles.slogan}>Transformando ambientes, colorindo vidas.</p>
           </div>
@@ -24,7 +24,6 @@ const Footer = () => {
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/nossas-tintas">Nossas Tintas</Link></li>
                 <li><Link to="/catalogo-de-cores">Catálogo de Cores</Link></li>
-                <li><Link to="/inspiracoes">Inspirações</Link></li>
               </ul>
             </div>
             

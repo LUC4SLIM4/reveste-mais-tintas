@@ -36,24 +36,17 @@ const About = () => {
       image: "/placeholder.svg?height=300&width=400",
     },
     {
-      year: "2018",
-      title: "Linha Sustentável EcoTintas",
-      description:
-        "Pioneiros na região, lançamos a primeira linha de tintas ecológicas com baixo VOC e componentes naturais. Esta iniciativa refletiu nosso compromisso com o meio ambiente e a saúde dos nossos clientes, estabelecendo novos padrões no mercado.",
-      image: "/placeholder.svg?height=300&width=400",
-    },
-    {
-      year: "2020",
+      year: "2023",
       title: "Transformação Digital",
       description:
-        "Implementamos tecnologias digitais avançadas, incluindo nosso e-commerce e sistema de gestão integrado. Durante a pandemia, conseguimos manter o atendimento aos clientes através de canais digitais, demonstrando nossa capacidade de adaptação.",
-      image: "/placeholder.svg?height=300&width=400",
+        "Nos últimos anos a empresa ampliou sua presença digital e diversificou seus produtos. Mantém loja oficial no Mercado Livre, com vendas para todo o país. Dentre as inovações em produtos próprios destacam-se linhas de impermeabilizantes e revestimentos decorativos. Por exemplo, a Linha Imperflex traz impermeabilizantes elásticos (para piscinas e lajes) que protegem contra infiltraçõe e para paredes externas, eficazes contra fissuras causadas pela chuva. Outro produto é o Impermeabilizante Veda Mais, à base de resina acrílica branca, ideal contra batidas de chuva em telhados e superfícies externas. A empresa também comercializa revestimentos texturizados como o “Pedras Naturais” (revestimento acrílico texturizado com estética de pedras naturais, que confere acabamento sofisticado aos ambientes). Além disso, oferece diversas linhas de tintas látex econômicas e acabamento semibrilho para interiores.",
+ image: "/placeholder.svg?height=300&width=400",
     },
     {
-      year: "2024",
+      year: "2025",
       title: "Liderança Regional Consolidada",
       description:
-        "Hoje somos reconhecidos como líderes regionais em tintas premium, com mais de 50.000 clientes satisfeitos e uma equipe de 80 colaboradores. Continuamos investindo em inovação e sustentabilidade para o futuro.",
+        "Atualmente a Reveste Mais continua atuando como microempresa em Patos de Minas, com matriz e filial em Tiros. A classificação de microempresa indica que possui até 19 funcionários. A empresa atende clientes residenciais e comerciais da região, mantendo foco em qualidade e inovação. Em linha com a sustentabilidade, mantém sua licença ambiental regularizada e segue desenvolvendo produtos cada vez mais modernos para o mercado de tintas e revestimentos.",
       image: "/placeholder.svg?height=300&width=400",
     },
   ]
@@ -93,37 +86,6 @@ const About = () => {
       description:
         "Desenvolvemos produtos específicos para diferentes superfícies e ambientes. Nossas tintas e revestimentos são indicados tanto para áreas internas quanto externas, oferecendo proteção, acabamento impecável e estética de alto impacto.",
       image: "/placeholder.svg?height=250&width=350",
-    },
-  ]
-
-  const sustainabilityActions = [
-    {
-      title: "Produtos Eco-friendly",
-      description:
-        "Nossa linha EcoTintas representa 40% de nossa produção, utilizando pigmentos naturais e resinas de base vegetal. Reduzimos em 60% os compostos orgânicos voláteis (VOC) em comparação com tintas convencionais, melhorando a qualidade do ar interno dos ambientes.",
-      impact: "Redução de 40% nas emissões tóxicas",
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      title: "Programa de Reciclagem",
-      description:
-        "Mantemos pontos de coleta em toda a região para reciclagem de latas e embalagens usadas. Nosso programa 'Lata Limpa' já coletou mais de 100.000 embalagens, que são transformadas em novos produtos ou destinadas corretamente.",
-      impact: "95% das embalagens são recicladas",
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      title: "Energia 100% Renovável",
-      description:
-        "Desde 2022, nossa fábrica opera exclusivamente com energia solar. Instalamos 500 painéis fotovoltaicos que geram toda a energia necessária para nossa produção, tornando-nos carbono neutro em nossas operações industriais.",
-      impact: "Redução de 60% na pegada de carbono",
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      title: "Projeto Mais Verde",
-      description:
-        "Para cada 10 latas de tinta vendidas, plantamos uma árvore nativa em parceria com ONGs ambientais. Já contribuímos para o plantio de mais de 50.000 mudas em áreas de preservação e recuperação ambiental da região.",
-      impact: "Mais de 50.000 árvores plantadas",
-      image: "/placeholder.svg?height=200&width=300",
     },
   ]
 
@@ -364,38 +326,6 @@ const About = () => {
                 </div>
                 <div className={styles.timelineImage}>
                   <img src={event.image || "/placeholder.svg"} alt={event.title} />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Sustainability Section */}
-      <section className={styles.sustainabilitySection}>
-        <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <h2>Atendimento Humanizado</h2>
-            <p>
-              Nossa equipe é treinada para oferecer um atendimento próximo, atencioso e personalizado.
-              Valorizamos cada cliente e buscamos entender seu projeto para oferecer as melhores 
-              soluções com empatia, clareza e comprometimento.
-            </p>
-          </div>
-
-          <div className={styles.sustainabilityGrid}>
-            {sustainabilityActions.map((action, index) => (
-              <div key={index} className={styles.sustainabilityCard}>
-                <div className={styles.sustainabilityImage}>
-                  <img src={action.image || "/placeholder.svg"} alt={action.title} />
-                  <div className={styles.impactBadge}>
-                    <FiHeart />
-                    <span>{action.impact}</span>
-                  </div>
-                </div>
-                <div className={styles.sustainabilityContent}>
-                  <h3>{action.title}</h3>
-                  <p>{action.description}</p>
                 </div>
               </div>
             ))}

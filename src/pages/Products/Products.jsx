@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import styles from "./Products.module.css"
-import { allProducts, productCategories } from "../../data/products"
+import { allProducts, productCategories, liters } from "../../data/products"
 import ProductCard from "../../components/ProductCard/ProductCard"
 import { Search, Filter, Grid, List, X, ChevronDown, ChevronUp } from "lucide-react"
 import { useSearchParams } from "react-router-dom"
@@ -15,6 +15,7 @@ const Products = () => {
   const [selectedCategories, setSelectedCategories] = useState([])
   const [selectedAreas, setSelectedAreas] = useState([])
   const [selectedFinishes, setSelectedFinishes] = useState([])
+  const [selectedLiters, setSelectedLiters] = useState([])
   const [sortBy, setSortBy] = useState("name")
   const [viewMode, setViewMode] = useState("grid")
   const [showFilters, setShowFilters] = useState(true)
@@ -22,6 +23,7 @@ const Products = () => {
     categories: true,
     areas: true,
     finishes: true,
+    liters: true,
   })
 
   // Configurações da empresa - ALTERE AQUI SEUS DADOS
@@ -36,6 +38,7 @@ const Products = () => {
     const categoryParam = searchParams.get("category")
     const areaParam = searchParams.get("area")
     const finishParam = searchParams.get("finish")
+    const litersParam = searchParams.get("liters")
     const searchParam = searchParams.get("search")
     const sortParam = searchParams.get("sort")
 
@@ -48,6 +51,9 @@ const Products = () => {
     if (finishParam) {
       setSelectedFinishes(finishParam.split(","))
     }
+    if (litersParam) {
+      setSelectedLiters(litersParam.split(","))
+    }
     if (searchParam) {
       setSearchTerm(searchParam)
     }
@@ -57,7 +63,7 @@ const Products = () => {
   }, [])
 
   // Função para atualizar a URL quando os filtros mudam
-  const updateURL = (categories, areas, finishes, search, sort) => {
+  const updateURL = (categories, areas, finishes, liters, search, sort) => {
     const params = new URLSearchParams()
 
     if (categories.length > 0) {
@@ -68,6 +74,9 @@ const Products = () => {
     }
     if (finishes.length > 0) {
       params.set("finish", finishes.join(","))
+    }
+    if (liters.length > 0) {
+      params.set("liters", liters.join(","))
     }
     if (search && search.trim()) {
       params.set("search", search)
@@ -97,6 +106,7 @@ const Products = () => {
     { id: "acetinado", name: "Acetinado" },
     { id: "semibrilho", name: "Semi-brilho" },
     { id: "brilhante", name: "Brilhante" },
+    { id: "texturizado", name: "Texturizado" },
   ]
 
   // Função para alternar a expansão de uma seção de filtro
@@ -117,7 +127,7 @@ const Products = () => {
     }
 
     setSelectedCategories(newCategories)
-    updateURL(newCategories, selectedAreas, selectedFinishes, searchTerm, sortBy)
+    updateURL(newCategories, selectedAreas, selectedFinishes, selectedLiters, searchTerm, sortBy)
   }
 
   // Função para lidar com a seleção de filtros de área
@@ -130,7 +140,7 @@ const Products = () => {
     }
 
     setSelectedAreas(newAreas)
-    updateURL(selectedCategories, newAreas, selectedFinishes, searchTerm, sortBy)
+    updateURL(selectedCategories, newAreas, selectedFinishes, selectedLiters, searchTerm, sortBy)
   }
 
   // Função para lidar com a seleção de filtros de acabamento
@@ -143,7 +153,20 @@ const Products = () => {
     }
 
     setSelectedFinishes(newFinishes)
-    updateURL(selectedCategories, selectedAreas, newFinishes, searchTerm, sortBy)
+    updateURL(selectedCategories, selectedAreas, newFinishes, selectedLiters, searchTerm, sortBy)
+  }
+
+  // Função para lidar com a seleção de filtros de litros
+  const handleLitersChange = (litersId) => {
+    let newLiters
+    if (selectedLiters.includes(litersId)) {
+      newLiters = selectedLiters.filter((id) => id !== litersId)
+    } else {
+      newLiters = [...selectedLiters, litersId]
+    }
+
+    setSelectedLiters(newLiters)
+    updateURL(selectedCategories, selectedAreas, selectedFinishes, newLiters, searchTerm, sortBy)
   }
 
   // Função para limpar todos os filtros
@@ -151,6 +174,7 @@ const Products = () => {
     setSelectedCategories([])
     setSelectedAreas([])
     setSelectedFinishes([])
+    setSelectedLiters([])
     setSearchTerm("")
     setSortBy("name")
     setSearchParams({})
@@ -159,13 +183,13 @@ const Products = () => {
   // Função para lidar com mudanças na busca
   const handleSearchChange = (value) => {
     setSearchTerm(value)
-    updateURL(selectedCategories, selectedAreas, selectedFinishes, value, sortBy)
+    updateURL(selectedCategories, selectedAreas, selectedFinishes, selectedLiters, value, sortBy)
   }
 
   // Função para lidar com mudanças na ordenação
   const handleSortChange = (value) => {
     setSortBy(value)
-    updateURL(selectedCategories, selectedAreas, selectedFinishes, searchTerm, value)
+    updateURL(selectedCategories, selectedAreas, selectedFinishes, selectedLiters, searchTerm, value)
   }
 
   // Filtragem de produtos
@@ -182,7 +206,9 @@ const Products = () => {
 
     const matchesFinish = selectedFinishes.length === 0 || (product.finish && selectedFinishes.includes(product.finish))
 
-    return matchesSearch && matchesCategory && matchesArea && matchesFinish
+    const matchesLiters = selectedLiters.length === 0 || (product.liters && selectedLiters.includes(product.liters))
+
+    return matchesSearch && matchesCategory && matchesArea && matchesFinish && matchesLiters
   })
 
   // Ordenação de produtos
@@ -358,6 +384,29 @@ const Products = () => {
                 </div>
               )}
             </div>
+
+            {/* Filtro de Litros */}
+            <div className={styles.filterSection}>
+              <div className={styles.filterTitle} onClick={() => toggleFilterSection("liters")}>
+                <h4>Litros</h4>
+                {expandedFilters.liters ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+              </div>
+
+              {expandedFilters.liters && (
+                <div className={styles.filterOptions}>
+                  {liters.map((liter) => (
+                    <label key={liter.id} className={styles.filterCheckbox}>
+                      <input
+                        type="checkbox"
+                        checked={selectedLiters.includes(liter.id)}
+                        onChange={() => handleLitersChange(liter.id)}
+                      />
+                      <span>{liter.name}</span>
+                    </label>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Conteúdo Principal */}
@@ -375,6 +424,7 @@ const Products = () => {
               {(selectedCategories.length > 0 ||
                 selectedAreas.length > 0 ||
                 selectedFinishes.length > 0 ||
+                selectedLiters.length > 0 ||
                 searchTerm) && (
                 <div className={styles.activeFilters}>
                   <span className={styles.activeFiltersLabel}>Filtros ativos:</span>
@@ -409,6 +459,18 @@ const Products = () => {
                       <span key={finishId} className={styles.activeFilter}>
                         {finish?.name}
                         <button onClick={() => handleFinishChange(finishId)}>
+                          <X size={14} />
+                        </button>
+                      </span>
+                    )
+                  })}
+
+                  {selectedLiters.map((litersId) => {
+                    const liter = liters.find((l) => l.id === litersId)
+                    return (
+                      <span key={litersId} className={styles.activeFilter}>
+                        {liter?.name}
+                        <button onClick={() => handleLitersChange(litersId)}>
                           <X size={14} />
                         </button>
                       </span>

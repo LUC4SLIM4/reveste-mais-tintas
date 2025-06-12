@@ -47,13 +47,13 @@ const Home = () => {
       </section>
 
       <section className={`section ${styles.productsSection}`}>
-        <div className="container-fluid">
+        <div className="container">
           <h2 className="section-title">Nossos Produtos</h2>
           <p className={styles.sectionDescription}>
             Conheça nossa linha completa de tintas para todas as suas necessidades
           </p>
 
-          {/* Carrossel de produtos substituindo a grade estática */}
+          {/* Carrossel de produtos com 3 itens e destaque no central */}
           <ProductCarousel products={allProducts} />
 
           <div className="text-center mt-4">
