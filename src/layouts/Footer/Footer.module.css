@@ -113,11 +113,12 @@
   transform: translateY(-3px);
 }
 
-.developer-info {
-    margin-top: 1rem;
-    text-decoration: none;
-    text-align: center;
-    font-size: .8rem;
+.developerInfo a {
+  text-decoration: none;
+  color: #fff; 
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .footerBottom {
@@ -133,6 +134,8 @@
 .footerBottomLinks {
   display: flex;
   align-items: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .footerBottomLinks a {

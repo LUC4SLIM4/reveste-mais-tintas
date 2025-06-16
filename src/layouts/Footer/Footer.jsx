@@ -100,9 +100,9 @@ const Footer = () => {
         <div className={styles.footerBottom}>
           <p>&copy; {currentYear} Reveste Mais Tintas. Todos os direitos reservados.</p>
           <div className={styles.developerInfo}>
-            <span>Desenvolvido por:</span>
+            <span>Desenvolvido por: </span>
             <a href="https://cropsight.netlify.app/" target="_blank" rel="noopener noreferrer">
-              <span>CropSight Solutions</span>
+              <span> CropSight Solutions</span>
               <img
                 src={reliveLogo || "/placeholder.svg"}
                 width={20}
