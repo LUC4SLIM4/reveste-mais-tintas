@@ -91,40 +91,18 @@ const About = () => {
 
   const teamMembers = [
     {
-      name: "João Silva",
-      position: "CEO & Fundador",
+      name: "Roberta Lívia Lima de Souza",
+      position: "Sócia-Fundadora e Administradora",
       description:
-        "Formado em Engenharia Química pela UFRJ, João é o visionário por trás da Reveste Mais Tintas. Com mais de 20 anos de experiência no setor químico, ele fundou a empresa com o objetivo de democratizar o acesso a tintas de alta qualidade. Sua paixão por inovação e sustentabilidade guia a estratégia da empresa.",
-      image: "/placeholder.svg?height=400&width=300",
-      achievements: [
-        "Prêmio Empreendedor do Ano 2020",
-        "Especialista em Química de Polímeros",
-        "Palestrante em eventos do setor",
-      ],
+        "Também graduada em Farmácia pelo UNIPAM, Roberta traz sua expertise técnica para garantir o rigor no controle de qualidade e na produção das tintas e revestimentos. Desde a fundação da empresa, atua diretamente na gestão comercial e na supervisão das operações, contribuindo para a excelência dos processos e para o fortalecimento do relacionamento com clientes e parceiros. Juntas, Patrícia e Roberta impulsionam a Reveste Mais Tintas com comprometimento, visão empreendedora e foco em inovação, consolidando a empresa como um dos principais nomes do setor na região de Patos de Minas/MG.",
+      image: "/roberta.jpg?height=400&width=300",
     },
     {
-      name: "Maria Santos",
-      position: "Diretora de P&D",
+      name: "Patrícia Emiliane da Silva Lima",
+      position: "Sócia-Fundadora e Administrador",
       description:
-        "Doutora em Química pela USP, Maria lidera nossa equipe de pesquisa e desenvolvimento. Responsável pela criação da linha EcoTintas, ela tem 15 anos de experiência em desenvolvimento de produtos sustentáveis. Sua expertise em nanotecnologia revolucionou nossa linha premium.",
-      image: "/placeholder.svg?height=400&width=300",
-      achievements: ["PhD em Química Aplicada", "12 patentes registradas", "Autora de 25 artigos científicos"],
-    },
-    {
-      name: "Carlos Oliveira",
-      position: "Diretor Comercial",
-      description:
-        "MBA em Marketing pela FGV, Carlos é responsável pela estratégia comercial e relacionamento com clientes. Com 18 anos no mercado de tintas, ele desenvolveu nossa rede de distribuição e programas de fidelidade. Sua visão de mercado é fundamental para nosso crescimento.",
-      image: "/placeholder.svg?height=400&width=300",
-      achievements: ["Crescimento de 300% nas vendas", "Rede de 200+ revendedores", "Especialista em Varejo"],
-    },
-    {
-      name: "Ana Costa",
-      position: "Gerente de Qualidade",
-      description:
-        "Engenheira de Produção pela UFMG, Ana garante que todos os nossos produtos atendam aos mais altos padrões de qualidade. Responsável pela implementação da ISO 9001, ela supervisiona todos os processos produtivos e controle de qualidade, assegurando a excelência em cada produto.",
-      image: "/placeholder.svg?height=400&width=300",
-      achievements: ["Certificação ISO 9001", "Zero defeitos em 2023", "Auditora Líder Certificada"],
+        "Formada em Farmácia pelo Centro Universitário de Patos de Minas (UNIPAM), Patrícia é uma das fundadoras da Reveste Mais Tintas, criada em 2013. Com ampla experiência no setor químico, ela atua na gestão estratégica e administrativa da empresa, sendo responsável por consolidar a marca no mercado regional como referência em qualidade e inovação. Seu olhar atento ao desenvolvimento de produtos e à sustentabilidade tem sido essencial para o crescimento sólido da empresa.",
+      image: "/patricia.png?height=400&width=300",
     },
   ]
 
@@ -337,7 +315,7 @@ const About = () => {
       <section className={styles.teamSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <h2>Nossa Equipe</h2>
+            <h2>Sócios, fundadoras da Reveste Mais Tintas</h2>
             <p>Conheça as pessoas apaixonadas e talentosas que fazem a Reveste Mais Tintas acontecer todos os dias</p>
           </div>
 
@@ -351,14 +329,6 @@ const About = () => {
                   <h3>{member.name}</h3>
                   <span className={styles.position}>{member.position}</span>
                   <p>{member.description}</p>
-                  <div className={styles.achievements}>
-                    <h4>Principais Conquistas:</h4>
-                    <ul>
-                      {member.achievements.map((achievement, i) => (
-                        <li key={i}>{achievement}</li>
-                      ))}
-                    </ul>
-                  </div>
                 </div>
               </div>
             ))}

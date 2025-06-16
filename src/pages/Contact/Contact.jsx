@@ -328,18 +328,15 @@ const Contact = () => {
               <div className={styles.socialSection}>
                 <h3>Siga-nos nas Redes Sociais</h3>
                 <div className={styles.socialLinks}>
-                  <a href="#" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                  <a href="https://www.facebook.com/revestemaistintas/photos?locale=pt_BR" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                     <i className="fab fa-facebook"></i>
                     <span>Facebook</span>
                   </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                  <a href="https://www.instagram.com/revestemaistintas/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
                     <i className="fab fa-instagram"></i>
                     <span>Instagram</span>
                   </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-                    <i className="fab fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                  </a>
+
                 </div>
               </div>
             </div>

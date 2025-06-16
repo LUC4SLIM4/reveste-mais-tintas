@@ -24,7 +24,7 @@ const Home = () => {
         <div className="container">
           <div className={styles.aboutContent}>
             <div className={styles.aboutImage}>
-              <img src="/src/assets/about-home.jpg" alt="Sobre a Reveste Mais Tintas" />
+              <img src="/aboutReveste.png" alt="Sobre a Reveste Mais Tintas" />
             </div>
             <div className={styles.aboutText}>
               <h2>Reveste Mais Tintas</h2>

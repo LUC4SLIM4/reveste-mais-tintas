@@ -18,7 +18,7 @@ import standard3L from "/standard3L.jpg"
 import standard18L from "/standard18L.jpg"
 import superEconomica from "/superEconomica.jpg"
 
-// Categorias de produtos expandidas
+// Categorias de produtos
 export const productCategories = [
   {
     id: "acrilica",
@@ -51,12 +51,6 @@ export const productCategories = [
     image: economica3L,
   },
   {
-    id: "verniz",
-    name: "Verniz e Stain",
-    description: "Produtos para proteção e realce da madeira natural",
-    image: economica18L,
-  },
-  {
     id: "impermeabilizante",
     name: "Impermeabilizantes",
     description: "Produtos para vedação e proteção contra umidade",
@@ -65,12 +59,12 @@ export const productCategories = [
   {
     id: "massa",
     name: "Massas e Fundos",
-    description: "Produtos para preparação e correção de superfícies",
-    image: galaoGeral,
+    description: "Produtos para correção e preparação de superfícies",
+    image: pedrasNaturais,
   },
 ]
 
-// Tipos de acabamento expandidos
+// Tipos de acabamento
 export const finishes = [
   { id: "fosco", name: "Fosco" },
   { id: "acetinado", name: "Acetinado" },
@@ -80,13 +74,13 @@ export const finishes = [
   { id: "cristal", name: "Cristal" },
 ]
 
-// Capacidades em litros e quilos expandidas
+// Capacidades em litros
 export const liters = [
-  { id: "25KG", name: "25 Kg" },
+  { id: "25kg", name: "25 Kg" },
   { id: "18L", name: "18 Litros" },
   { id: "16L", name: "16 Litros" },
   { id: "12L", name: "12 Litros" },
-  { id: "5.4KG", name: "5,4 Kg" },
+  { id: "5.4kg", name: "5,4 Kg" },
   { id: "3.6L", name: "3,6 Litros" },
   { id: "1L", name: "1 Litro" },
 ]
@@ -114,71 +108,70 @@ export const brands = [
   { id: "elasticor", name: "Elasticor" },
   { id: "imperflex", name: "Imperflex" },
   { id: "veda-mais", name: "Veda Mais" },
+  { id: "grafiato", name: "Grafiato" },
+  { id: "arenato", name: "Arenato Crystal" },
 ]
 
-// Todos os produtos expandidos baseados nos documentos Word
+// Todos os produtos
 export const allProducts = [
   // Linha Premium
   {
     id: 1,
-    name: "Tinta Acrílica Premium 18L",
-    shortDescription: "Tinta acrílica premium de alta qualidade com excelente cobertura e durabilidade",
+    name: "Tinta Premium 18L",
+    shortDescription: "Tinta acrílica premium com excelente cobertura e durabilidade",
     image: acetinado,
     categoryId: "acrilica",
     area: "interno",
-    finish: "fosco",
+    finish: "acetinado",
     liters: "18L",
     color: "branco",
     price: 189.9,
-    features: ["Lavável", "Sem cheiro", "Secagem rápida", "Anti-mofo", "Alta cobertura"],
-    coverage: "12m²/L",
-    brand: "premium",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-premium-1",
-    description:
-      "Tinta acrílica premium desenvolvida com tecnologia avançada para proporcionar máxima durabilidade e beleza às suas paredes. Ideal para ambientes internos que exigem acabamento superior.",
+    features: ["Lavável", "Anti-mofo", "Secagem rápida", "Alta cobertura"],
+    coverage: "14m²/L",
+    brand: "Premium",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-premium-18l",
+    description: "Tinta acrílica premium desenvolvida com tecnologia avançada para máxima durabilidade.",
   },
   {
     id: 2,
-    name: "Tinta Acrílica Premium 3,6L",
+    name: "Tinta Premium 3,6L",
     shortDescription: "Tinta acrílica premium em embalagem econômica",
     image: galaoGeral,
     categoryId: "acrilica",
     area: "interno",
-    finish: "fosco",
+    finish: "acetinado",
     liters: "3.6L",
     color: "branco",
     price: 45.9,
-    features: ["Lavável", "Sem cheiro", "Secagem rápida", "Anti-mofo"],
-    coverage: "12m²/L",
-    brand: "premium",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-premium-2",
-    description:
-      "Tinta acrílica premium em embalagem de 3,6L, perfeita para pequenos projetos e retoques com qualidade superior.",
+    features: ["Lavável", "Anti-mofo", "Secagem rápida"],
+    coverage: "14m²/L",
+    brand: "Premium",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-premium-36l",
+    description: "Tinta acrílica premium em embalagem de 3,6L para pequenos projetos.",
   },
   {
     id: 3,
-    name: "Tinta Acrílica Premium 1L",
-    shortDescription: "Tinta acrílica premium para pequenos projetos",
+    name: "Tinta Premium 1L",
+    shortDescription: "Tinta acrílica premium para retoques e pequenas áreas",
     image: litroGeral,
     categoryId: "acrilica",
     area: "interno",
-    finish: "fosco",
+    finish: "acetinado",
     liters: "1L",
     color: "branco",
     price: 15.9,
-    features: ["Lavável", "Sem cheiro", "Secagem rápida"],
-    coverage: "12m²/L",
-    brand: "premium",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-premium-3",
-    description:
-      "Tinta acrílica premium em embalagem de 1L, ideal para retoques e pequenos reparos com qualidade profissional.",
+    features: ["Lavável", "Anti-mofo", "Secagem rápida"],
+    coverage: "14m²/L",
+    brand: "Premium",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-premium-1l",
+    description: "Tinta acrílica premium em embalagem de 1L para retoques.",
   },
 
   // Linha Standard
   {
     id: 4,
     name: "Tinta Standard 18L",
-    shortDescription: "Tinta acrílica com ótimo custo-benefício para grandes áreas",
+    shortDescription: "Tinta acrílica com ótimo custo-benefício",
     image: standard18L,
     categoryId: "acrilica",
     area: "interno",
@@ -186,17 +179,16 @@ export const allProducts = [
     liters: "18L",
     color: "branco",
     price: 149.9,
-    features: ["Boa cobertura", "Fácil aplicação", "Secagem rápida", "Durável"],
-    coverage: "10m²/L",
-    brand: "standard",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-standard-1",
-    description:
-      "Tinta acrílica Standard com excelente relação custo-benefício, ideal para grandes projetos residenciais e comerciais.",
+    features: ["Boa cobertura", "Fácil aplicação", "Secagem rápida"],
+    coverage: "12m²/L",
+    brand: "Standard",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-standard-18l",
+    description: "Tinta acrílica standard com excelente relação custo-benefício.",
   },
   {
     id: 5,
     name: "Tinta Standard 3,6L",
-    shortDescription: "Tinta acrílica Standard em embalagem média",
+    shortDescription: "Tinta acrílica standard em galão",
     image: standard3L,
     categoryId: "acrilica",
     area: "interno",
@@ -204,17 +196,16 @@ export const allProducts = [
     liters: "3.6L",
     color: "branco",
     price: 35.9,
-    features: ["Boa cobertura", "Fácil aplicação", "Secagem rápida"],
-    coverage: "10m²/L",
-    brand: "standard",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-standard-2",
-    description:
-      "Tinta acrílica Standard em embalagem de 3,6L, perfeita para projetos de médio porte com qualidade garantida.",
+    features: ["Boa cobertura", "Fácil aplicação"],
+    coverage: "12m²/L",
+    brand: "Standard",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-standard-36l",
+    description: "Tinta acrílica standard em embalagem de 3,6L.",
   },
   {
     id: 6,
     name: "Tinta Standard 1L",
-    shortDescription: "Tinta acrílica Standard para pequenos projetos",
+    shortDescription: "Tinta acrílica standard para pequenos projetos",
     image: litroGeral,
     categoryId: "acrilica",
     area: "interno",
@@ -223,18 +214,17 @@ export const allProducts = [
     color: "branco",
     price: 12.9,
     features: ["Boa cobertura", "Fácil aplicação"],
-    coverage: "10m²/L",
-    brand: "standard",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-standard-3",
-    description:
-      "Tinta acrílica Standard em embalagem de 1L, ideal para retoques e pequenos reparos com qualidade confiável.",
+    coverage: "12m²/L",
+    brand: "Standard",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-standard-1l",
+    description: "Tinta acrílica standard em embalagem de 1L.",
   },
 
   // Linha Econômica
   {
     id: 7,
     name: "Tinta Econômica 18L",
-    shortDescription: "Tinta látex econômica para grandes projetos",
+    shortDescription: "Tinta econômica para grandes áreas",
     image: economica18L,
     categoryId: "latex",
     area: "interno",
@@ -242,16 +232,16 @@ export const allProducts = [
     liters: "18L",
     color: "branco",
     price: 119.9,
-    features: ["Econômica", "Grande rendimento", "Boa cobertura"],
-    coverage: "8m²/L",
-    brand: "economica",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-economica-1",
-    description: "Tinta látex econômica em embalagem de 18L para grandes projetos com excelente custo-benefício.",
+    features: ["Econômica", "Boa cobertura", "Fácil aplicação"],
+    coverage: "10m²/L",
+    brand: "Econômica",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-economica-18l",
+    description: "Tinta látex econômica ideal para grandes projetos.",
   },
   {
     id: 8,
     name: "Tinta Econômica 3,6L",
-    shortDescription: "Tinta látex econômica para projetos médios",
+    shortDescription: "Tinta econômica em galão",
     image: economica3L,
     categoryId: "latex",
     area: "interno",
@@ -259,17 +249,16 @@ export const allProducts = [
     liters: "3.6L",
     color: "branco",
     price: 28.9,
-    features: ["Econômica", "Boa cobertura", "Fácil aplicação"],
-    coverage: "8m²/L",
-    brand: "economica",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-economica-2",
-    description:
-      "Tinta látex econômica em embalagem de 3,6L, ideal para projetos de médio porte com economia garantida.",
+    features: ["Econômica", "Boa cobertura"],
+    coverage: "10m²/L",
+    brand: "Econômica",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-economica-36l",
+    description: "Tinta látex econômica em embalagem de 3,6L.",
   },
   {
     id: 9,
     name: "Tinta Econômica 1L",
-    shortDescription: "Tinta látex econômica para pequenos projetos",
+    shortDescription: "Tinta econômica para retoques",
     image: litroGeral,
     categoryId: "latex",
     area: "interno",
@@ -277,18 +266,18 @@ export const allProducts = [
     liters: "1L",
     color: "branco",
     price: 9.9,
-    features: ["Econômica", "Fácil aplicação"],
-    coverage: "8m²/L",
-    brand: "economica",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-economica-3",
-    description: "Tinta látex econômica em embalagem de 1L, perfeita para retoques e pequenos reparos econômicos.",
+    features: ["Econômica", "Boa cobertura"],
+    coverage: "10m²/L",
+    brand: "Econômica",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-economica-1l",
+    description: "Tinta látex econômica em embalagem de 1L.",
   },
 
   // Linha Super Econômica
   {
     id: 10,
     name: "Tinta Super Econômica 18L",
-    shortDescription: "Tinta látex super econômica para grandes volumes",
+    shortDescription: "Tinta super econômica para grandes volumes",
     image: superEconomica,
     categoryId: "latex",
     area: "interno",
@@ -296,17 +285,16 @@ export const allProducts = [
     liters: "18L",
     color: "branco",
     price: 99.9,
-    features: ["Super econômica", "Grande volume", "Cobertura básica"],
-    coverage: "7m²/L",
-    brand: "super-economica",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-super-economica-1",
-    description:
-      "Tinta látex super econômica para grandes projetos onde o custo é prioridade, mantendo qualidade básica.",
+    features: ["Super econômica", "Grande rendimento"],
+    coverage: "8m²/L",
+    brand: "Super Econômica",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-super-economica-18l",
+    description: "Tinta látex super econômica para grandes volumes.",
   },
   {
     id: 11,
     name: "Tinta Super Econômica 3,6L",
-    shortDescription: "Tinta látex super econômica em embalagem média",
+    shortDescription: "Tinta super econômica em galão",
     image: galaoGeral,
     categoryId: "latex",
     area: "interno",
@@ -314,18 +302,18 @@ export const allProducts = [
     liters: "3.6L",
     color: "branco",
     price: 24.9,
-    features: ["Super econômica", "Cobertura básica"],
-    coverage: "7m²/L",
-    brand: "super-economica",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-super-economica-2",
-    description: "Tinta látex super econômica em embalagem de 3,6L, ideal para projetos com orçamento limitado.",
+    features: ["Super econômica", "Grande rendimento"],
+    coverage: "8m²/L",
+    brand: "Super Econômica",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-super-economica-36l",
+    description: "Tinta látex super econômica em embalagem de 3,6L.",
   },
 
   // Linha Rende Mais
   {
     id: 12,
     name: "Rende Mais 18L",
-    shortDescription: "Tinta com alto rendimento e cobertura superior",
+    shortDescription: "Tinta com alto rendimento e cobertura",
     image: rendeMais18L,
     categoryId: "acrilica",
     area: "interno",
@@ -333,17 +321,16 @@ export const allProducts = [
     liters: "18L",
     color: "branco",
     price: 169.9,
-    features: ["Alto rendimento", "Cobertura superior", "Lavável", "Durável"],
-    coverage: "14m²/L",
-    brand: "rende-mais",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-rende-mais-1",
-    description:
-      "Tinta acrílica Rende Mais com tecnologia de alto rendimento, proporcionando maior cobertura por litro.",
+    features: ["Alto rendimento", "Excelente cobertura", "Durável"],
+    coverage: "15m²/L",
+    brand: "Rende Mais",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-rende-mais-18l",
+    description: "Tinta acrílica com tecnologia de alto rendimento.",
   },
   {
     id: 13,
     name: "Rende Mais 16L",
-    shortDescription: "Tinta com alto rendimento em embalagem de 16L",
+    shortDescription: "Tinta com alto rendimento em barrica",
     image: rendeMais16L,
     categoryId: "acrilica",
     area: "interno",
@@ -351,16 +338,16 @@ export const allProducts = [
     liters: "16L",
     color: "branco",
     price: 149.9,
-    features: ["Alto rendimento", "Cobertura superior", "Lavável"],
-    coverage: "14m²/L",
-    brand: "rende-mais",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-rende-mais-2",
-    description: "Tinta acrílica Rende Mais em embalagem de 16L, ideal para projetos que exigem máximo rendimento.",
+    features: ["Alto rendimento", "Excelente cobertura"],
+    coverage: "15m²/L",
+    brand: "Rende Mais",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-rende-mais-16l",
+    description: "Tinta acrílica Rende Mais em embalagem de 16L.",
   },
   {
     id: 14,
     name: "Rende Mais 3,6L",
-    shortDescription: "Tinta com alto rendimento em embalagem econômica",
+    shortDescription: "Tinta com alto rendimento em galão",
     image: rendeMais3L,
     categoryId: "acrilica",
     area: "interno",
@@ -368,19 +355,18 @@ export const allProducts = [
     liters: "3.6L",
     color: "branco",
     price: 39.9,
-    features: ["Alto rendimento", "Cobertura superior"],
-    coverage: "14m²/L",
-    brand: "rende-mais",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-rende-mais-3",
-    description:
-      "Tinta acrílica Rende Mais em embalagem de 3,6L, perfeita para projetos médios com máximo aproveitamento.",
+    features: ["Alto rendimento", "Excelente cobertura"],
+    coverage: "15m²/L",
+    brand: "Rende Mais",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-rende-mais-36l",
+    description: "Tinta acrílica Rende Mais em embalagem de 3,6L.",
   },
 
   // Linha Elasticor
   {
     id: 15,
     name: "Elasticor 18L",
-    shortDescription: "Tinta elástica para proteção contra fissuras",
+    shortDescription: "Tinta elástica para fissuras e rachaduras",
     image: elasticor18L,
     categoryId: "acrilica",
     area: "externo",
@@ -388,30 +374,28 @@ export const allProducts = [
     liters: "18L",
     color: "branco",
     price: 219.9,
-    features: ["Elástica", "Anti-fissuras", "Proteção UV", "Impermeável", "Durabilidade superior"],
-    coverage: "10m²/L",
-    brand: "elasticor",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-elasticor-1",
-    description:
-      "Tinta acrílica elástica Elasticor, especialmente desenvolvida para cobrir e prevenir fissuras em fachadas.",
+    features: ["Elástica", "Cobre fissuras", "Resistente às intempéries"],
+    coverage: "12m²/L",
+    brand: "Elasticor",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-elasticor-18l",
+    description: "Tinta acrílica elástica que cobre fissuras e rachaduras.",
   },
   {
     id: 16,
     name: "Elasticor 3,6L",
-    shortDescription: "Tinta elástica em embalagem média",
+    shortDescription: "Tinta elástica em galão",
     image: galaoGeral,
     categoryId: "acrilica",
     area: "externo",
     finish: "fosco",
     liters: "3.6L",
     color: "branco",
-    price: 54.9,
-    features: ["Elástica", "Anti-fissuras", "Proteção UV"],
-    coverage: "10m²/L",
-    brand: "elasticor",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-elasticor-2",
-    description:
-      "Tinta acrílica elástica Elasticor em embalagem de 3,6L, ideal para reparos e pequenas áreas externas.",
+    price: 52.9,
+    features: ["Elástica", "Cobre fissuras"],
+    coverage: "12m²/L",
+    brand: "Elasticor",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-elasticor-36l",
+    description: "Tinta acrílica elástica Elasticor em embalagem de 3,6L.",
   },
   {
     id: 17,
@@ -424,19 +408,18 @@ export const allProducts = [
     liters: "1L",
     color: "branco",
     price: 18.9,
-    features: ["Elástica", "Anti-fissuras"],
-    coverage: "10m²/L",
-    brand: "elasticor",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-elasticor-3",
-    description:
-      "Tinta acrílica elástica Elasticor em embalagem de 1L, perfeita para retoques e pequenos reparos em fissuras.",
+    features: ["Elástica", "Cobre fissuras"],
+    coverage: "12m²/L",
+    brand: "Elasticor",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-elasticor-1l",
+    description: "Tinta acrílica elástica Elasticor em embalagem de 1L.",
   },
 
-  // Linha Acetinado
+  // Acetinado
   {
     id: 18,
     name: "Acetinado 18L",
-    shortDescription: "Tinta acrílica com acabamento acetinado lavável",
+    shortDescription: "Tinta com acabamento acetinado lavável",
     image: acetinado,
     categoryId: "acrilica",
     area: "interno",
@@ -444,19 +427,18 @@ export const allProducts = [
     liters: "18L",
     color: "branco",
     price: 199.9,
-    features: ["Acabamento acetinado", "Super lavável", "Resistente a manchas", "Durável"],
-    coverage: "12m²/L",
-    brand: "premium",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-acetinado-1",
-    description:
-      "Tinta acrílica com acabamento acetinado, ideal para ambientes que exigem limpeza frequente e resistência.",
+    features: ["Acabamento acetinado", "Lavável", "Resistente"],
+    coverage: "13m²/L",
+    brand: "Premium",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-acetinado-18l",
+    description: "Tinta acrílica com acabamento acetinado, ideal para ambientes que exigem limpeza frequente.",
   },
 
-  // Linha Semi-brilho
+  // Semi-brilho
   {
     id: 19,
     name: "Semi-brilho 18L",
-    shortDescription: "Tinta acrílica com acabamento semi-brilho",
+    shortDescription: "Tinta com acabamento semi-brilho",
     image: semiBrilho18L,
     categoryId: "acrilica",
     area: "interno",
@@ -464,18 +446,18 @@ export const allProducts = [
     liters: "18L",
     color: "branco",
     price: 209.9,
-    features: ["Acabamento semi-brilho", "Super lavável", "Resistente", "Elegante"],
-    coverage: "11m²/L",
-    brand: "premium",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-semibrilho-1",
-    description: "Tinta acrílica com acabamento semi-brilho, proporcionando elegância e facilidade de limpeza.",
+    features: ["Semi-brilho", "Lavável", "Resistente a manchas"],
+    coverage: "12m²/L",
+    brand: "Premium",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-semibrilho-18l",
+    description: "Tinta acrílica com acabamento semi-brilho para ambientes sofisticados.",
   },
 
-  // Impermeabilizantes - Linha Imperflex
+  // Impermeabilizantes
   {
     id: 20,
     name: "Imperflex 12L",
-    shortDescription: "Impermeabilizante acrílico flexível",
+    shortDescription: "Impermeabilizante flexível de alta performance",
     image: impermeabilizante,
     categoryId: "impermeabilizante",
     area: "externo",
@@ -483,34 +465,33 @@ export const allProducts = [
     liters: "12L",
     color: "branco",
     price: 159.9,
-    features: ["Impermeável", "Flexível", "Resistente a intempéries", "Proteção UV"],
+    features: ["Impermeável", "Flexível", "Resistente a UV"],
     coverage: "4m²/L",
-    brand: "imperflex",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-imperflex-1",
-    description:
-      "Impermeabilizante acrílico flexível Imperflex, ideal para lajes, terraços e superfícies expostas à chuva.",
+    brand: "Imperflex",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-imperflex-12l",
+    description: "Impermeabilizante acrílico flexível para lajes e terraços.",
   },
   {
     id: 21,
     name: "Imperflex 3,6L",
-    shortDescription: "Impermeabilizante acrílico em embalagem média",
+    shortDescription: "Impermeabilizante flexível em galão",
     image: galaoGeral,
     categoryId: "impermeabilizante",
     area: "externo",
     finish: "fosco",
     liters: "3.6L",
     color: "branco",
-    price: 54.9,
-    features: ["Impermeável", "Flexível", "Resistente a intempéries"],
+    price: 52.9,
+    features: ["Impermeável", "Flexível"],
     coverage: "4m²/L",
-    brand: "imperflex",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-imperflex-2",
-    description: "Impermeabilizante acrílico flexível Imperflex em embalagem de 3,6L para pequenas áreas.",
+    brand: "Imperflex",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-imperflex-36l",
+    description: "Impermeabilizante acrílico flexível Imperflex em galão.",
   },
   {
     id: 22,
     name: "Imperflex 1L",
-    shortDescription: "Impermeabilizante acrílico para pequenos reparos",
+    shortDescription: "Impermeabilizante flexível para pequenas áreas",
     image: litroGeral,
     categoryId: "impermeabilizante",
     area: "externo",
@@ -520,65 +501,65 @@ export const allProducts = [
     price: 18.9,
     features: ["Impermeável", "Flexível"],
     coverage: "4m²/L",
-    brand: "imperflex",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-imperflex-3",
-    description: "Impermeabilizante acrílico flexível Imperflex em embalagem de 1L para reparos pontuais.",
+    brand: "Imperflex",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-imperflex-1l",
+    description: "Impermeabilizante acrílico flexível Imperflex em 1L.",
   },
 
-  // Linha Veda Mais
+  // Veda Mais
   {
     id: 23,
     name: "Veda Mais 12L",
-    shortDescription: "Impermeabilizante de alta performance",
+    shortDescription: "Impermeabilizante para vedação de superfícies",
     image: baldeGeral,
     categoryId: "impermeabilizante",
     area: "externo",
     finish: "fosco",
     liters: "12L",
     color: "branco",
-    price: 179.9,
-    features: ["Alta impermeabilização", "Resistente", "Durável", "Proteção máxima"],
-    coverage: "3m²/L",
-    brand: "veda-mais",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-veda-mais-1",
-    description: "Impermeabilizante Veda Mais de alta performance para máxima proteção contra infiltrações.",
+    price: 139.9,
+    features: ["Vedação eficaz", "Resistente", "Fácil aplicação"],
+    coverage: "5m²/L",
+    brand: "Veda Mais",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-veda-mais-12l",
+    description: "Impermeabilizante Veda Mais para vedação de lajes e muros.",
   },
   {
     id: 24,
     name: "Veda Mais 3,6L",
-    shortDescription: "Impermeabilizante de alta performance em embalagem média",
+    shortDescription: "Impermeabilizante Veda Mais em galão",
     image: galaoGeral,
     categoryId: "impermeabilizante",
     area: "externo",
     finish: "fosco",
     liters: "3.6L",
     color: "branco",
-    price: 59.9,
-    features: ["Alta impermeabilização", "Resistente", "Durável"],
-    coverage: "3m²/L",
-    brand: "veda-mais",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-veda-mais-2",
-    description: "Impermeabilizante Veda Mais em embalagem de 3,6L para projetos de médio porte.",
+    price: 45.9,
+    features: ["Vedação eficaz", "Resistente"],
+    coverage: "5m²/L",
+    brand: "Veda Mais",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-veda-mais-36l",
+    description: "Impermeabilizante Veda Mais em embalagem de 3,6L.",
   },
   {
     id: 25,
     name: "Veda Mais 1L",
-    shortDescription: "Impermeabilizante de alta performance para pequenos reparos",
+    shortDescription: "Impermeabilizante Veda Mais para pequenos reparos",
     image: litroGeral,
     categoryId: "impermeabilizante",
     area: "externo",
     finish: "fosco",
     liters: "1L",
     color: "branco",
-    price: 21.9,
-    features: ["Alta impermeabilização", "Resistente"],
-    coverage: "3m²/L",
-    brand: "veda-mais",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-veda-mais-3",
-    description: "Impermeabilizante Veda Mais em embalagem de 1L para reparos e pequenas áreas.",
+    price: 16.9,
+    features: ["Vedação eficaz", "Resistente"],
+    coverage: "5m²/L",
+    brand: "Veda Mais",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-veda-mais-1l",
+    description: "Impermeabilizante Veda Mais em embalagem de 1L.",
   },
 
-  // Seladores Acrílicos
+  // Seladores
   {
     id: 26,
     name: "Selador Acrílico 18L - Balde",
@@ -590,16 +571,16 @@ export const allProducts = [
     liters: "18L",
     color: "transparente",
     price: 89.9,
-    features: ["Alta penetração", "Fixa o pó", "Uniformiza absorção", "Base universal"],
+    features: ["Fixa o pó", "Uniformiza absorção", "Econômico"],
     coverage: "20m²/L",
-    brand: "standard",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-selador-1",
-    description: "Selador acrílico em balde de 18L para preparação de grandes superfícies antes da pintura.",
+    brand: "Standard",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-selador-18l",
+    description: "Selador acrílico concentrado para preparação de paredes.",
   },
   {
     id: 27,
     name: "Selador Acrílico 16L - Barrica",
-    shortDescription: "Selador acrílico em embalagem barrica",
+    shortDescription: "Selador acrílico em barrica",
     image: barrica,
     categoryId: "primer",
     area: "interno",
@@ -607,11 +588,11 @@ export const allProducts = [
     liters: "16L",
     color: "transparente",
     price: 79.9,
-    features: ["Alta penetração", "Fixa o pó", "Uniformiza absorção"],
+    features: ["Fixa o pó", "Uniformiza absorção"],
     coverage: "20m²/L",
-    brand: "standard",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-selador-2",
-    description: "Selador acrílico em barrica de 16L, ideal para obras e projetos profissionais.",
+    brand: "Standard",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-selador-16l",
+    description: "Selador acrílico em embalagem barrica de 16L.",
   },
   {
     id: 28,
@@ -623,19 +604,19 @@ export const allProducts = [
     finish: "fosco",
     liters: "3.6L",
     color: "transparente",
-    price: 24.9,
-    features: ["Alta penetração", "Fixa o pó"],
+    price: 22.9,
+    features: ["Fixa o pó", "Uniformiza absorção"],
     coverage: "20m²/L",
-    brand: "standard",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-selador-3",
-    description: "Selador acrílico em galão de 3,6L para projetos de médio porte e preparação de superfícies.",
+    brand: "Standard",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-selador-36l",
+    description: "Selador acrílico em embalagem galão de 3,6L.",
   },
 
-  // Fundos para Pedras
+  // Fundo para Pedras
   {
     id: 29,
     name: "Fundo para Pedras 12L",
-    shortDescription: "Fundo especial para aplicação em pedras naturais",
+    shortDescription: "Fundo preparador para pedras naturais",
     image: pedrasNaturais,
     categoryId: "primer",
     area: "externo",
@@ -643,16 +624,16 @@ export const allProducts = [
     liters: "12L",
     color: "transparente",
     price: 119.9,
-    features: ["Aderência em pedras", "Resistente a intempéries", "Base especial"],
+    features: ["Preparação para pedras", "Aderência superior", "Resistente"],
     coverage: "15m²/L",
-    brand: "standard",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-fundo-pedras-1",
-    description: "Fundo especialmente desenvolvido para preparação de pedras naturais antes da aplicação de tintas.",
+    brand: "Standard",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-fundo-pedras-12l",
+    description: "Fundo preparador especial para aplicação em pedras naturais.",
   },
   {
     id: 30,
     name: "Fundo para Pedras 3,6L",
-    shortDescription: "Fundo para pedras em embalagem média",
+    shortDescription: "Fundo preparador para pedras em galão",
     image: galaoGeral,
     categoryId: "primer",
     area: "externo",
@@ -660,173 +641,138 @@ export const allProducts = [
     liters: "3.6L",
     color: "transparente",
     price: 39.9,
-    features: ["Aderência em pedras", "Resistente a intempéries"],
+    features: ["Preparação para pedras", "Aderência superior"],
     coverage: "15m²/L",
-    brand: "standard",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-fundo-pedras-2",
-    description: "Fundo para pedras em galão de 3,6L, ideal para pequenos projetos com pedras naturais.",
+    brand: "Standard",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-fundo-pedras-36l",
+    description: "Fundo preparador para pedras naturais em galão.",
   },
   {
     id: 31,
     name: "Fundo para Pedras 1L",
-    shortDescription: "Fundo para pedras em embalagem pequena",
+    shortDescription: "Fundo preparador para pedras em 1L",
     image: litroGeral,
     categoryId: "primer",
     area: "externo",
     finish: "fosco",
     liters: "1L",
     color: "transparente",
-    price: 14.9,
-    features: ["Aderência em pedras"],
+    price: 15.9,
+    features: ["Preparação para pedras", "Aderência superior"],
     coverage: "15m²/L",
-    brand: "standard",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-fundo-pedras-3",
-    description: "Fundo para pedras em embalagem de 1L para pequenos reparos e retoques em pedras naturais.",
+    brand: "Standard",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-fundo-pedras-1l",
+    description: "Fundo preparador para pedras naturais em 1L.",
   },
 
-  // Massas Corridas
+  // Massas
   {
     id: 32,
     name: "Massa Corrida 25Kg",
-    shortDescription: "Massa corrida para correção de imperfeições em paredes",
-    image: baldeGeral,
+    shortDescription: "Massa corrida para correção de imperfeições",
+    image: decoraMais,
     categoryId: "massa",
     area: "interno",
     finish: "fosco",
-    liters: "25KG",
+    liters: "25kg",
     color: "branco",
     price: 45.9,
-    features: ["Correção de imperfeições", "Fácil aplicação", "Boa aderência", "Secagem rápida"],
+    features: ["Correção de imperfeições", "Fácil lixamento", "Boa aderência"],
     coverage: "3m²/Kg",
-    brand: "standard",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-massa-corrida-1",
-    description: "Massa corrida em saco de 25Kg para correção de imperfeições e preparação de paredes internas.",
+    brand: "Standard",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-massa-corrida-25kg",
+    description: "Massa corrida em pó para correção de imperfeições em paredes.",
   },
   {
     id: 33,
     name: "Massa Corrida 5,4Kg - Galão",
-    shortDescription: "Massa corrida pronta para uso em galão",
+    shortDescription: "Massa corrida pronta para uso",
     image: galaoGeral,
     categoryId: "massa",
     area: "interno",
     finish: "fosco",
-    liters: "5.4KG",
+    liters: "5.4kg",
     color: "branco",
-    price: 18.9,
-    features: ["Pronta para uso", "Correção de imperfeições", "Fácil aplicação"],
+    price: 32.9,
+    features: ["Pronta para uso", "Fácil aplicação", "Boa aderência"],
     coverage: "3m²/Kg",
-    brand: "standard",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-massa-corrida-2",
-    description: "Massa corrida pronta para uso em galão de 5,4Kg, ideal para pequenos reparos e correções.",
+    brand: "Standard",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-massa-corrida-54kg",
+    description: "Massa corrida pronta para uso em galão de 5,4Kg.",
   },
 
-  // Texturas - Grafiato
+  // Texturas
   {
     id: 34,
     name: "Grafiato 25Kg",
-    shortDescription: "Textura decorativa Grafiato para efeitos especiais",
+    shortDescription: "Textura decorativa Grafiato",
     image: decoraMais,
     categoryId: "texturizada",
     area: "externo",
     finish: "texturizado",
-    liters: "25KG",
+    liters: "25kg",
     color: "branco",
     price: 89.9,
-    features: ["Efeito grafiato", "Resistente a intempéries", "Decorativo", "Durável"],
+    features: ["Textura decorativa", "Resistente às intempéries", "Efeito rústico"],
     coverage: "2m²/Kg",
-    brand: "standard",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-grafiato-1",
-    description: "Textura decorativa Grafiato em saco de 25Kg para criar efeitos únicos em fachadas e paredes.",
+    brand: "Grafiato",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-grafiato-25kg",
+    description: "Textura decorativa Grafiato para acabamentos rústicos.",
   },
   {
     id: 35,
     name: "Grafiato 5,4Kg",
-    shortDescription: "Textura Grafiato em embalagem menor",
+    shortDescription: "Textura decorativa Grafiato em galão",
     image: galaoGeral,
     categoryId: "texturizada",
     area: "externo",
     finish: "texturizado",
-    liters: "5.4KG",
+    liters: "5.4kg",
     color: "branco",
-    price: 24.9,
-    features: ["Efeito grafiato", "Resistente a intempéries", "Decorativo"],
+    price: 25.9,
+    features: ["Textura decorativa", "Efeito rústico"],
     coverage: "2m²/Kg",
-    brand: "standard",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-grafiato-2",
-    description: "Textura decorativa Grafiato em embalagem de 5,4Kg para pequenos projetos decorativos.",
+    brand: "Grafiato",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-grafiato-54kg",
+    description: "Textura decorativa Grafiato em galão de 5,4Kg.",
   },
 
-  // Texturas - Arenato Crystal Brilho
+  // Arenato Crystal
   {
     id: 36,
     name: "Arenato Crystal Brilho 25Kg",
-    shortDescription: "Textura decorativa com efeito cristal brilhante",
+    shortDescription: "Textura decorativa com efeito cristal",
     image: decoraMais,
     categoryId: "texturizada",
     area: "externo",
     finish: "cristal",
-    liters: "25KG",
+    liters: "25kg",
     color: "branco",
     price: 119.9,
-    features: ["Efeito cristal", "Brilho especial", "Resistente", "Decorativo premium"],
+    features: ["Efeito cristal", "Brilho especial", "Resistente"],
     coverage: "2.5m²/Kg",
-    brand: "premium",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-arenato-crystal-1",
-    description: "Textura decorativa Arenato Crystal com efeito brilhante especial para acabamentos sofisticados.",
+    brand: "Arenato Crystal",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-arenato-25kg",
+    description: "Textura decorativa Arenato Crystal com efeito brilhante especial.",
   },
   {
     id: 37,
     name: "Arenato Crystal Brilho 5,4Kg",
-    shortDescription: "Textura Crystal em embalagem menor",
+    shortDescription: "Textura Arenato Crystal em galão",
     image: galaoGeral,
     categoryId: "texturizada",
     area: "externo",
     finish: "cristal",
-    liters: "5.4KG",
+    liters: "5.4kg",
     color: "branco",
-    price: 34.9,
-    features: ["Efeito cristal", "Brilho especial", "Decorativo premium"],
+    price: 35.9,
+    features: ["Efeito cristal", "Brilho especial"],
     coverage: "2.5m²/Kg",
-    brand: "premium",
-    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-arenato-crystal-2",
-    description: "Textura decorativa Arenato Crystal em embalagem de 5,4Kg para projetos especiais.",
+    brand: "Arenato Crystal",
+    mercadoLivreUrl: "https://produto.mercadolivre.com.br/MLB-arenato-54kg",
+    description: "Textura decorativa Arenato Crystal em galão de 5,4Kg.",
   },
 ]
-
-// Função para normalizar texto (remover acentos e converter para minúsculas)
-const normalizeText = (text) => {
-  return text
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^\w\s]/gi, "")
-}
-
-// Função para calcular a similaridade entre duas strings
-const calculateSimilarity = (str1, str2) => {
-  if (str1.length <= 3 || str2.length <= 3) {
-    return str1 === str2
-  }
-
-  if (str1.includes(str2) || str2.includes(str1)) {
-    return true
-  }
-
-  const words1 = str1.split(" ")
-  const words2 = str2.split(" ")
-
-  for (const word1 of words1) {
-    if (word1.length <= 2) continue
-    for (const word2 of words2) {
-      if (word2.length <= 2) continue
-      if (word1.includes(word2) || word2.includes(word1)) {
-        return true
-      }
-    }
-  }
-
-  return false
-}
 
 // Função para buscar produtos por categoria
 export const getProductsByCategory = (categoryId) => {
@@ -838,42 +784,32 @@ export const getProductById = (id) => {
   return allProducts.find((product) => product.id === Number.parseInt(id))
 }
 
-// Função para buscar produtos por filtros com busca melhorada
+// Função para buscar produtos por filtros
 export const getFilteredProducts = (filters) => {
   return allProducts.filter((product) => {
     const matchesCategory = !filters.category || product.categoryId === filters.category
     const matchesArea = !filters.area || product.area === filters.area
     const matchesFinish = !filters.finish || product.finish === filters.finish
     const matchesLiters = !filters.liters || product.liters === filters.liters
-    const matchesColor = !filters.color || product.color === filters.color
     const matchesBrand = !filters.brand || product.brand === filters.brand
 
     let matchesSearch = true
     if (filters.search && filters.search.trim()) {
-      const searchNormalized = normalizeText(filters.search)
-      const nameNormalized = normalizeText(product.name)
-      const descNormalized = normalizeText(product.shortDescription || "")
-      const brandNormalized = normalizeText(brands.find((b) => b.id === product.brand)?.name || "")
-      const categoryName = productCategories.find((c) => c.id === product.categoryId)?.name || ""
-      const categoryNormalized = normalizeText(categoryName)
-
+      const searchTerm = filters.search.toLowerCase()
       matchesSearch =
-        calculateSimilarity(nameNormalized, searchNormalized) ||
-        calculateSimilarity(descNormalized, searchNormalized) ||
-        calculateSimilarity(brandNormalized, searchNormalized) ||
-        calculateSimilarity(categoryNormalized, searchNormalized)
+        product.name.toLowerCase().includes(searchTerm) ||
+        product.shortDescription.toLowerCase().includes(searchTerm) ||
+        product.brand.toLowerCase().includes(searchTerm)
     }
 
-    return (
-      matchesCategory && matchesArea && matchesFinish && matchesLiters && matchesColor && matchesBrand && matchesSearch
-    )
+    return matchesCategory && matchesArea && matchesFinish && matchesLiters && matchesBrand && matchesSearch
   })
 }
 
 // Função para obter produtos em destaque
 export const getFeaturedProducts = () => {
   return allProducts
-    .filter((product) => product.brand === "premium" || product.brand === "elasticor" || product.brand === "rende-mais")
+    .filter((product) => product.brand === "Premium" || product.brand === "Elasticor" || product.brand === "Rende Mais")
     .slice(0, 6)
 }
 

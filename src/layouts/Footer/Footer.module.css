@@ -113,6 +113,13 @@
   transform: translateY(-3px);
 }
 
+.developer-info {
+    margin-top: 1rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: .8rem;
+}
+
 .footerBottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 1.5rem;
