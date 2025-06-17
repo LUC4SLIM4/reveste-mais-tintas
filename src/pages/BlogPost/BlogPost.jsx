@@ -47,7 +47,7 @@ const BlogPost = () => {
       <div className={styles.errorContainer}>
         <h2>Artigo não encontrado</h2>
         <p>O artigo que você está procurando não existe ou foi removido.</p>
-        <Link to="/blog" className={styles.backButton}>
+        <Link to="/dicas-de-pintura" className={styles.backButton}>
           <FiArrowLeft /> Voltar para o Blog
         </Link>
       </div>
@@ -64,7 +64,7 @@ const BlogPost = () => {
         <div className={styles.heroOverlay}>
           <div className="container">
             <div className={styles.postHeroContent}>
-              <Link to="/blog" className={styles.backLink}>
+              <Link to="/dicas-de-pintura" className={styles.backLink}>
                 <FiArrowLeft /> Voltar para o Blog
               </Link>
               <div className={styles.postCategory}>{post.category}</div>
