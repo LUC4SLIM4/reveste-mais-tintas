@@ -126,9 +126,6 @@ const About = () => {
               transformam espaços.
             </p>
           </div>
-          <div className={styles.heroImage}>
-            <img src="/placeholder.svg?height=500&width=600" alt="Reveste Mais Tintas" />
-          </div>
         </div>
       </section>
 

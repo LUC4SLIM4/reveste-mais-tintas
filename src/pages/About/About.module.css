@@ -52,13 +52,6 @@
   opacity: 0.9;
 }
 
-.heroImage img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
 /* Stats Section */
 .statsSection {
   padding: 80px 0;

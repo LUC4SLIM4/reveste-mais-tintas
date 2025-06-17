@@ -395,8 +395,7 @@ const Products = () => {
                 price={product.price}
                 features={product.features}
                 brand={product.brand}
-                whatsappNumber="5511999999999"
-                mercadoLivreUrl={product.mercadoLivreUrl}
+                whatsappNumber="553498884410"
                 showWhatsApp={true}
                 showMercadoLivre={true}
               />
