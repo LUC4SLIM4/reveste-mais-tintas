@@ -4,23 +4,9 @@
 
 /* Hero Section */
 .hero {
-  padding: 120px 0 80px;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  color: var(--dark-gray);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></svg>');
-  background-size: 30px 30px;
-  opacity: 0.3;
+  padding: 80px 0;
+  background: var(--primary-color);
+  color: white;
 }
 
 .container {
@@ -30,32 +16,43 @@
 }
 
 .heroContent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-  position: relative;
-  z-index: 1;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
 }
 
 .heroContent h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
 .heroContent p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-size: 1.1rem;
   line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
   opacity: 0.9;
+}
+
+.heroImage {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.heroImage img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
 }
 
 /* Stats Section */
 .statsSection {
-  padding: 80px 0;
-  background: #ffffff;
+  padding: 10px 0;
+  background: #f8fafc;
 }
 
 .statsGrid {
@@ -66,125 +63,100 @@
 
 .statCard {
   text-align: center;
-  padding: 40px 20px;
-  background: var(--card-background);
-  border-radius: 12px;
-  box-shadow: 0 5px 15px var(--shadow-color);
-  transition: transform 0.3s ease;
-}
-
-.statCard:hover {
-  transform: translateY(-10px);
+  padding: 30px 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .statNumber {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: var(--primary-color);
-  display: block;
-  margin-bottom: 10px;
-}
-
-.statLabel {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--dark-gray);
-  display: block;
   margin-bottom: 8px;
 }
 
-.statDescription {
-  font-size: 0.9rem;
-  color: var(--gray);
-  line-height: 1.4;
+.statLabel {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
 }
 
 /* Story Section */
 .storySection {
-  padding: 100px 0;
-  background: #f8fafc;
+  padding: 80px 0;
+  background: white;
+}
+
+.storySection h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .storyContent {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 60px;
+  gap: 40px;
   align-items: start;
 }
 
-.storyText h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 2rem;
-}
-
 .storyText p {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.7;
   color: var(--text-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 20px;
 }
 
 .storyImage {
-  position: sticky;
-  top: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .storyImage img {
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.imageCaption {
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--gray);
-  margin-top: 15px;
-  font-style: italic;
+  height: 500px;
+  object-fit: cover;
 }
 
 /* Values Section */
 .valuesSection {
-  padding: 100px 0;
-  background: #ffffff;
+  padding: 80px 0;
+  background: #f8fafc;
 }
 
 .valuesGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 30px;
 }
 
 .valueCard {
-  background: var(--card-background);
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px var(--shadow-color);
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.valueCard:hover {
-  transform: translateY(-10px);
 }
 
 .valueIcon {
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, var(--accent-color) 0%, #059669 100%);
+  width: 60px;
+  height: 60px;
+  background: var(--accent-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .valueCard h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 15px;
@@ -203,305 +175,211 @@
 .valueItem {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-  font-size: 0.95rem;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
   color: var(--text-color);
 }
 
 .valueItem svg {
   color: var(--accent-color);
-  font-size: 1.1rem;
+  font-size: 1rem;
   flex-shrink: 0;
-}
-
-/* Section Headers */
-.sectionHeader {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.sectionHeader h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-.sectionHeader p {
-  font-size: 1.1rem;
-  color: var(--text-color);
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
 }
 
 /* Differentials Section */
 .differentialsSection {
-  padding: 100px 0;
-  background: #f8fafc;
-}
-
-.differentialsContainer {
-  display: grid;
-  gap: 40px;
-}
-
-.differentialItem {
-  display: grid;
-  grid-template-columns: 350px 1fr;
-  gap: 40px;
-  align-items: center;
+  padding: 80px 0;
   background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
 }
 
-.differentialItem:hover {
+.differentialsSection h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sectionDescription {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.differentialsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.differentialCard:nth-child(4) {
+  grid-column: 1.5 / 2.5;
+}
+
+.differentialCard:nth-child(5) {
+  grid-column: 2.5 / 3.5;
+}
+
+.differentialCard {
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.differentialCard:hover {
   transform: translateY(-5px);
-}
-
-.differentialItem:nth-child(even) {
-  grid-template-columns: 1fr 350px;
-}
-
-.differentialItem:nth-child(even) .differentialImage {
-  order: 2;
-}
-
-.differentialItem:nth-child(even) .differentialContent {
-  order: 1;
-}
-
-.differentialImage {
-  position: relative;
-  height: 250px;
-  overflow: hidden;
-}
-
-.differentialImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .differentialIcon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, var(--accent-color) 0%, #059669 100%);
+  width: 50px;
+  height: 50px;
+  background: var(--accent-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto 15px;
   color: white;
-  font-size: 1.5rem;
-  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  font-size: 1.3rem;
 }
 
-.differentialContent {
-  padding: 40px;
-}
-
-.differentialContent h3 {
-  font-size: 1.5rem;
+.differentialCard h3 {
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--primary-color);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-.differentialContent p {
+.differentialCard p {
   color: var(--text-color);
-  line-height: 1.7;
-  font-size: 1.05rem;
+  line-height: 1.5;
+  font-size: 0.9rem;
 }
 
 /* Timeline Section */
 .timelineSection {
-  padding: 100px 0;
-  background: #ffffff;
+  padding: 80px 0;
+  background: #f8fafc;
 }
 
-.timelineContainer {
+.timelineSection h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.timelineContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.timelineImage {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.timelineImage img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.timelineEvents {
   position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
-.timelineContainer::before {
+.timelineEvents::before {
   content: "";
   position: absolute;
-  left: 50%;
+  left: 20px;
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
-  transform: translateX(-50%);
+  background: var(--primary-color);
 }
 
 .timelineItem {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  margin-bottom: 80px;
-  align-items: center;
   position: relative;
+  margin-bottom: 30px;
+  padding-left: 50px;
 }
 
 .timelineItem::before {
   content: "";
   position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 20px;
-  height: 20px;
+  left: 14px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
   background: var(--accent-color);
   border-radius: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  box-shadow: 0 0 0 4px white, 0 0 0 8px var(--accent-color);
-}
-
-.timelineLeft .timelineContent {
-  text-align: right;
-  padding-right: 40px;
-}
-
-.timelineRight .timelineContent {
-  order: 2;
-  text-align: left;
-  padding-left: 40px;
-}
-
-.timelineRight .timelineImage {
-  order: 1;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px var(--accent-color);
 }
 
 .timelineYear {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--primary-color);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.timelineContent h3 {
-  font-size: 1.5rem;
+.timelineText h3 {
+  font-size: 1.2rem;
   font-weight: 600;
-  color: var(--dark-gray);
-  margin-bottom: 15px;
-}
-
-.timelineContent p {
   color: var(--text-color);
-  line-height: 1.7;
-  font-size: 1.05rem;
+  margin-bottom: 8px;
 }
 
-.timelineImage img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* Sustainability Section */
-.sustainabilitySection {
-  padding: 100px 0;
-  background: #f8fafc;
-}
-
-.sustainabilityGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-}
-
-.sustainabilityCard {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-}
-
-.sustainabilityCard:hover {
-  transform: translateY(-5px);
-}
-
-.sustainabilityImage {
-  position: relative;
-  height: 200px;
-  overflow: hidden;
-}
-
-.sustainabilityImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.impactBadge {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  background: rgba(16, 185, 129, 0.9);
-  color: white;
-  padding: 8px 15px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  backdrop-filter: blur(10px);
-}
-
-.sustainabilityContent {
-  padding: 30px;
-}
-
-.sustainabilityContent h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--primary-color);
-  margin-bottom: 15px;
-}
-
-.sustainabilityContent p {
+.timelineText p {
   color: var(--text-color);
-  line-height: 1.7;
-  font-size: 1.05rem;
+  line-height: 1.6;
+  font-size: 0.9rem;
 }
 
 /* Team Section */
 .teamSection {
-  padding: 100px 0;
-  background: #ffffff;
+  padding: 80px 0;
+  background: white;
+}
+
+.teamSection h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .teamGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 30px;
 }
 
 .teamCard {
-  background: var(--card-background);
-  border-radius: 12px;
+  background: #f8fafc;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 5px 15px var(--shadow-color);
-  transition: transform 0.3s ease;
-}
-
-.teamCard:hover {
-  transform: translateY(-10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .teamImage {
-  height: 300px;
+  height: 250px;
   overflow: hidden;
 }
 
@@ -509,19 +387,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.teamCard:hover .teamImage img {
-  transform: scale(1.05);
 }
 
 .teamInfo {
-  padding: 30px;
+  padding: 25px;
 }
 
 .teamInfo h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 5px;
@@ -531,8 +404,6 @@
   color: var(--accent-color);
   font-weight: 600;
   font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   margin-bottom: 15px;
   display: block;
 }
@@ -540,166 +411,64 @@
 .teamInfo p {
   color: var(--text-color);
   line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.achievements h4 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--dark-gray);
-  margin-bottom: 10px;
-}
-
-.achievements ul {
-  list-style: none;
-  padding: 0;
-}
-
-.achievements li {
-  color: var(--text-color);
-  font-size: 0.9rem;
-  margin-bottom: 5px;
-  position: relative;
-  padding-left: 15px;
-}
-
-.achievements li::before {
-  content: "•";
-  color: var(--accent-color);
-  position: absolute;
-  left: 0;
-}
-
-/* CTA Section */
-.cta {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #0a2540 0%, #1e293b 100%);
-  color: white;
-  text-align: center;
-}
-
-.ctaContent h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
-
-.ctaContent p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.ctaButtons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.ctaButtons .btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  font-size: 0.95rem;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .heroContent {
+  .storyContent,
+  .differentialsContent,
+  .timelineContent {
     grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
+    gap: 30px;
   }
 
-  .storyContent {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .storyImage {
-    position: static;
+  .timelineImage {
+    order: -1;
   }
 
   .valuesGrid {
     grid-template-columns: 1fr;
   }
-
-  .differentialItem,
-  .differentialItem:nth-child(even) {
-    grid-template-columns: 1fr;
-  }
-
-  .differentialItem:nth-child(even) .differentialImage,
-  .differentialItem:nth-child(even) .differentialContent {
-    order: initial;
-  }
-
-  .differentialImage {
-    height: 200px;
-  }
-
-  .timelineContainer::before {
-    left: 30px;
-  }
-
-  .timelineItem {
-    grid-template-columns: 1fr;
-    margin-left: 60px;
-  }
-
-  .timelineItem::before {
-    left: -30px;
-    transform: translateY(-50%);
-  }
-
-  .timelineLeft .timelineContent,
-  .timelineRight .timelineContent {
-    text-align: left;
-    padding: 0;
-    order: 2;
-  }
-
-  .timelineRight .timelineImage {
-    order: 1;
-  }
-
-  .sustainabilityGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .teamGrid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 768px) {
+  .differentialsGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .differentialCard:nth-child(4),
+  .differentialCard:nth-child(5) {
+    grid-column: 1;
+  }
+
   .heroContent h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+
+  .heroImage img {
+    height: 250px;
   }
 
   .statsGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .differentialContent {
-    padding: 30px 20px;
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .timelineEvents::before {
+    left: 15px;
   }
 
   .timelineItem {
-    margin-left: 40px;
+    padding-left: 40px;
   }
 
-  .ctaButtons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .ctaButtons .btn {
-    width: 100%;
-    max-width: 300px;
+  .timelineItem::before {
+    left: 9px;
   }
 }
 
@@ -709,10 +478,13 @@
   }
 
   .heroContent h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
-  .sectionHeader h2 {
-    font-size: 2rem;
+  .storySection h2,
+  .differentialsSection h2,
+  .timelineSection h2,
+  .teamSection h2 {
+    font-size: 1.8rem;
   }
 }
