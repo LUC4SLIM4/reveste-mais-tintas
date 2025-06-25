@@ -101,7 +101,7 @@ const Footer = () => {
           <p>&copy; {currentYear} Reveste Mais Tintas. Todos os direitos reservados.</p>
           <div className={styles.developerInfo}>
             <span>Desenvolvido por: </span>
-            <a href="https://cropsight.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <a href="https://cropsightsolutions.com.br/" target="_blank" rel="noopener noreferrer">
               <span> CropSight Solutions</span>
               <img
                 src={reliveLogo || "/placeholder.svg"}
