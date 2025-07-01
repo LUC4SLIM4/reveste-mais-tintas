@@ -1,5 +1,5 @@
 .colorCatalogPage {
-  padding-top: var(--header-height);
+  padding-top: var(--header-height, 80px);
 }
 
 .heroSection {
@@ -26,17 +26,17 @@
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--dark-gray);
+  color: #1f2937;
   position: relative;
   z-index: 1;
 }
 
 .heroSection p {
   font-size: 1.3rem;
-  color: var(--gray);
+  color: #6b7280;
   position: relative;
   z-index: 1;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -45,27 +45,51 @@
   background: #ffffff;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .filterContainer {
   margin-bottom: 3rem;
+}
+
+.filterContainer h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.filterGroup {
+  margin-bottom: 2rem;
+}
+
+.filterGroup h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
 .filterButtons {
-  display: inline-flex;
-  background: #f8fafc;
-  border-radius: 8px;
-  padding: 4px;
-  gap: 2px;
-  border: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .filterButton {
-  background: transparent;
-  border: none;
-  border-radius: 6px;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
   padding: 12px 24px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   font-size: 0.95rem;
   font-weight: 500;
   color: #64748b;
@@ -73,40 +97,48 @@
 }
 
 .filterButton:hover {
-  color: #334155;
-  background: rgba(255, 255, 255, 0.8);
+  color: #E65C00;
+  border-color: #d6966c;
+  background: #eff6ff;
+  transform: translateY(-2px);
 }
 
 .filterButton.active {
-  background: #ffffff;
-  color: #1e293b;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  font-weight: 600;
+  background: #E65C00;
+  color: white;
+  border-color: #E65C00;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+  transform: translateY(-2px);
 }
 
 .resultsInfo {
   text-align: center;
   margin-bottom: 2rem;
-  padding: 1rem;
-  background: #f8fafc;
-  border-radius: 8px;
-  border-left: 4px solid #3b82f6;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-radius: 12px;
+  border-left: 4px solid #E65C00;
 }
 
 .resultsInfo p {
   margin: 0;
-  font-size: 1rem;
-  color: #64748b;
+  font-size: 1.1rem;
+  color: #1f2937;
 }
 
 .resultsInfo strong {
-  color: #1e293b;
-  font-weight: 600;
+  color: #E65C00;
+  font-weight: 700;
+}
+
+.filterStatus {
+  color: #6b7280;
+  font-weight: 500;
 }
 
 .colorsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 2rem;
   animation: fadeInUp 0.6s ease-out;
 }
@@ -128,12 +160,12 @@
   }
 
   .filterButton {
-    min-width: 100px;
+    min-width: 120px;
     padding: 0.875rem 1.25rem;
   }
 
   .colorsGrid {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 1.5rem;
   }
 }
@@ -166,27 +198,19 @@
   }
 
   .filterButton {
-    min-width: 90px;
+    min-width: 100px;
     padding: 0.75rem 1rem;
-    flex: 1;
-    max-width: 140px;
-  }
-
-  .filterName {
     font-size: 0.9rem;
   }
 
-  .filterCount {
-    font-size: 0.8rem;
-  }
-
   .colorsGrid {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 1rem;
   }
 
   .resultsInfo {
     margin-bottom: 1.5rem;
+    padding: 1rem;
   }
 }
 
@@ -195,21 +219,17 @@
     flex-direction: column;
     align-items: center;
     max-width: 300px;
+    margin: 0 auto;
   }
 
   .filterButton {
     width: 100%;
     max-width: none;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     padding: 1rem 1.5rem;
   }
 
-  .filterName {
-    text-align: left;
-  }
-
   .colorsGrid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }

@@ -72,7 +72,7 @@ const Home = () => {
           </p>
 
           <div className={styles.colorsGrid}>
-            {popularColors.slice(0, 8).map((color) => (
+            {popularColors.slice(0, 4).map((color) => (
               <ColorSwatch key={color.id} color={color.hex} name={color.name} code={color.code} />
             ))}
           </div>

@@ -58,10 +58,23 @@
   margin: 0 auto;
 }
 
+.colorsSection {
+  padding: 4rem 0;
+  background-color: #f8fafc;
+}
+
+.colorsSection .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--dark-gray);
+  margin-bottom: 1rem;
+}
+
 .colorsGrid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
 }
 
 .inspirationsGrid {
@@ -129,7 +142,8 @@
   }
 
   .colorsGrid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
   .inspirationsGrid,
@@ -146,6 +160,7 @@
 
   .colorsGrid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 
   .ctaContent h2 {

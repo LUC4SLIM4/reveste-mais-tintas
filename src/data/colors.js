@@ -1,125 +1,318 @@
 export const popularColors = [
   {
     id: 1,
-    name: 'Branco Neve',
-    code: 'RMT-001',
-    hex: '#FFFFFF'
+    name: "Branco Neve",
+    code: "RMT-001",
+    hex: "#FFFFFF",
+    brand: "reveste-mais",
   },
   {
     id: 2,
-    name: 'Azul Serenidade',
-    code: 'RMT-102',
-    hex: '#92A8D1'
+    name: "Azul Serenidade",
+    code: "RMT-102",
+    hex: "#92A8D1",
+    brand: "reveste-mais",
   },
   {
     id: 3,
-    name: 'Verde Natureza',
-    code: 'RMT-203',
-    hex: '#88B04B'
+    name: "Verde Natureza",
+    code: "RMT-203",
+    hex: "#88B04B",
+    brand: "reveste-mais",
   },
   {
     id: 4,
-    name: 'Amarelo Solar',
-    code: 'RMT-304',
-    hex: '#FDDB6D'
+    name: "Amarelo Solar",
+    code: "RMT-304",
+    hex: "#FDDB6D",
+    brand: "reveste-mais",
   },
-  {
-    id: 5,
-    name: 'Vermelho Paixão',
-    code: 'RMT-405',
-    hex: '#C94C4C'
-  },
-  {
-    id: 6,
-    name: 'Cinza Elegante',
-    code: 'RMT-506',
-    hex: '#91A3B0'
-  },
-  {
-    id: 7,
-    name: 'Bege Clássico',
-    code: 'RMT-607',
-    hex: '#D6CABD'
-  },
-  {
-    id: 8,
-    name: 'Lilás Suave',
-    code: 'RMT-708',
-    hex: '#B18FCF'
-  }
-];
+]
 
 export const colorPalettes = [
   {
-    id: 'neutros',
-    name: 'Neutros',
+    id: "neutros",
+    name: "Neutros",
     colors: [
-      { id: 101, name: 'Branco Neve', code: 'RMT-001', hex: '#FFFFFF' },
-      { id: 102, name: 'Branco Gelo', code: 'RMT-002', hex: '#F5F5F5' },
-      { id: 103, name: 'Cinza Claro', code: 'RMT-003', hex: '#E0E0E0' },
-      { id: 104, name: 'Cinza Médio', code: 'RMT-004', hex: '#ADADAD' },
-      { id: 105, name: 'Cinza Escuro', code: 'RMT-005', hex: '#707070' },
-      { id: 106, name: 'Preto', code: 'RMT-006', hex: '#333333' },
-      { id: 107, name: 'Bege Claro', code: 'RMT-007', hex: '#E8E0D5' },
-      { id: 108, name: 'Bege Médio', code: 'RMT-008', hex: '#D6CABD' },
-      { id: 109, name: 'Marrom Claro', code: 'RMT-009', hex: '#B39F8D' },
-      { id: 110, name: 'Marrom Escuro', code: 'RMT-010', hex: '#7D6B5D' }
-    ]
+      // Coral - Neutros
+      { id: "c001", name: "Branco Absoluto", code: "C-001", hex: "#FFFFFF", brand: "coral" },
+      { id: "c002", name: "Branco Gelo", code: "C-002", hex: "#F8F8FF", brand: "coral" },
+      { id: "c003", name: "Branco Antigo", code: "C-003", hex: "#F5F5DC", brand: "coral" },
+      { id: "c004", name: "Cinza Platina", code: "C-004", hex: "#E6E6FA", brand: "coral" },
+      { id: "c005", name: "Cinza Pérola", code: "C-005", hex: "#DCDCDC", brand: "coral" },
+      { id: "c006", name: "Cinza Concreto", code: "C-006", hex: "#C0C0C0", brand: "coral" },
+      { id: "c007", name: "Cinza Chumbo", code: "C-007", hex: "#808080", brand: "coral" },
+      { id: "c008", name: "Cinza Grafite", code: "C-008", hex: "#696969", brand: "coral" },
+      { id: "c009", name: "Cinza Carvão", code: "C-009", hex: "#36454F", brand: "coral" },
+      { id: "c010", name: "Preto Absoluto", code: "C-010", hex: "#000000", brand: "coral" },
+      { id: "c011", name: "Bege Clássico", code: "C-011", hex: "#F5F5DC", brand: "coral" },
+      { id: "c012", name: "Bege Rosado", code: "C-012", hex: "#F0E68C", brand: "coral" },
+      { id: "c013", name: "Marfim", code: "C-013", hex: "#FFFFF0", brand: "coral" },
+      { id: "c014", name: "Creme", code: "C-014", hex: "#F5F5DC", brand: "coral" },
+      { id: "c015", name: "Areia", code: "C-015", hex: "#F4A460", brand: "coral" },
+
+      // Suvinil - Neutros
+      { id: "s001", name: "Branco Neve", code: "S-001", hex: "#FFFFFF", brand: "suvinil" },
+      { id: "s002", name: "Branco Linho", code: "S-002", hex: "#FAF0E6", brand: "suvinil" },
+      { id: "s003", name: "Off White", code: "S-003", hex: "#F8F8FF", brand: "suvinil" },
+      { id: "s004", name: "Cinza Claro", code: "S-004", hex: "#F0F0F0", brand: "suvinil" },
+      { id: "s005", name: "Cinza Médio", code: "S-005", hex: "#D3D3D3", brand: "suvinil" },
+      { id: "s006", name: "Cinza Escuro", code: "S-006", hex: "#A9A9A9", brand: "suvinil" },
+      { id: "s007", name: "Cinza Antracito", code: "S-007", hex: "#708090", brand: "suvinil" },
+      { id: "s008", name: "Cinza Urbano", code: "S-008", hex: "#2F4F4F", brand: "suvinil" },
+      { id: "s009", name: "Preto Fosco", code: "S-009", hex: "#2C2C2C", brand: "suvinil" },
+      { id: "s010", name: "Bege Natural", code: "S-010", hex: "#F5F5DC", brand: "suvinil" },
+      { id: "s011", name: "Bege Suave", code: "S-011", hex: "#FDF5E6", brand: "suvinil" },
+      { id: "s012", name: "Palha", code: "S-012", hex: "#EEE8AA", brand: "suvinil" },
+      { id: "s013", name: "Champanhe", code: "S-013", hex: "#F7E7CE", brand: "suvinil" },
+      { id: "s014", name: "Café com Leite", code: "S-014", hex: "#DDBEA9", brand: "suvinil" },
+      { id: "s015", name: "Taupe", code: "S-015", hex: "#483C32", brand: "suvinil" },
+
+      // Reveste Mais - Neutros
+      { id: "r001", name: "Branco Neve", code: "RMT-001", hex: "#FFFFFF", brand: "reveste-mais" },
+      { id: "r002", name: "Branco Gelo", code: "RMT-002", hex: "#F5F5F5", brand: "reveste-mais" },
+      { id: "r003", name: "Cinza Claro", code: "RMT-003", hex: "#E0E0E0", brand: "reveste-mais" },
+      { id: "r004", name: "Cinza Médio", code: "RMT-004", hex: "#ADADAD", brand: "reveste-mais" },
+      { id: "r005", name: "Cinza Escuro", code: "RMT-005", hex: "#707070", brand: "reveste-mais" },
+      { id: "r006", name: "Preto", code: "RMT-006", hex: "#333333", brand: "reveste-mais" },
+      { id: "r007", name: "Bege Claro", code: "RMT-007", hex: "#E8E0D5", brand: "reveste-mais" },
+      { id: "r008", name: "Bege Médio", code: "RMT-008", hex: "#D6CABD", brand: "reveste-mais" },
+      { id: "r009", name: "Marrom Claro", code: "RMT-009", hex: "#B39F8D", brand: "reveste-mais" },
+      { id: "r010", name: "Marrom Escuro", code: "RMT-010", hex: "#7D6B5D", brand: "reveste-mais" },
+    ],
   },
   {
-    id: 'azuis',
-    name: 'Azuis',
+    id: "azuis",
+    name: "Azuis",
     colors: [
-      { id: 201, name: 'Azul Céu', code: 'RMT-101', hex: '#B8D8E8' },
-      { id: 202, name: 'Azul Serenidade', code: 'RMT-102', hex: '#92A8D1' },
-      { id: 203, name: 'Azul Marinho', code: 'RMT-103', hex: '#34568B' },
-      { id: 204, name: 'Azul Turquesa', code: 'RMT-104', hex: '#5BC8AF' },
-      { id: 205, name: 'Azul Petróleo', code: 'RMT-105', hex: '#0F4C81' },
-      { id: 206, name: 'Azul Bebê', code: 'RMT-106', hex: '#D4F1F9' },
-      { id: 207, name: 'Azul Cobalto', code: 'RMT-107', hex: '#1E4D8C' },
-      { id: 208, name: 'Azul Índigo', code: 'RMT-108', hex: '#4B0082' }
-    ]
+      // Coral - Azuis
+      { id: "c101", name: "Azul Céu", code: "C-101", hex: "#87CEEB", brand: "coral" },
+      { id: "c102", name: "Azul Bebê", code: "C-102", hex: "#B0E0E6", brand: "coral" },
+      { id: "c103", name: "Azul Claro", code: "C-103", hex: "#ADD8E6", brand: "coral" },
+      { id: "c104", name: "Azul Médio", code: "C-104", hex: "#4169E1", brand: "coral" },
+      { id: "c105", name: "Azul Royal", code: "C-105", hex: "#4169E1", brand: "coral" },
+      { id: "c106", name: "Azul Marinho", code: "C-106", hex: "#000080", brand: "coral" },
+      { id: "c107", name: "Azul Petróleo", code: "C-107", hex: "#008B8B", brand: "coral" },
+      { id: "c108", name: "Azul Turquesa", code: "C-108", hex: "#40E0D0", brand: "coral" },
+      { id: "c109", name: "Azul Cobalto", code: "C-109", hex: "#0047AB", brand: "coral" },
+      { id: "c110", name: "Azul Anil", code: "C-110", hex: "#4B0082", brand: "coral" },
+      { id: "c111", name: "Azul Piscina", code: "C-111", hex: "#00BFFF", brand: "coral" },
+      { id: "c112", name: "Azul Aço", code: "C-112", hex: "#4682B4", brand: "coral" },
+
+      // Suvinil - Azuis
+      { id: "s101", name: "Azul Serenidade", code: "S-101", hex: "#92A8D1", brand: "suvinil" },
+      { id: "s102", name: "Azul Celeste", code: "S-102", hex: "#B0C4DE", brand: "suvinil" },
+      { id: "s103", name: "Azul Powder", code: "S-103", hex: "#B0E0E6", brand: "suvinil" },
+      { id: "s104", name: "Azul Atlântico", code: "S-104", hex: "#1E90FF", brand: "suvinil" },
+      { id: "s105", name: "Azul Safira", code: "S-105", hex: "#0F52BA", brand: "suvinil" },
+      { id: "s106", name: "Azul Noite", code: "S-106", hex: "#191970", brand: "suvinil" },
+      { id: "s107", name: "Azul Oceano", code: "S-107", hex: "#006994", brand: "suvinil" },
+      { id: "s108", name: "Azul Tiffany", code: "S-108", hex: "#0ABAB5", brand: "suvinil" },
+      { id: "s109", name: "Azul Acinzentado", code: "S-109", hex: "#708090", brand: "suvinil" },
+      { id: "s110", name: "Azul Denim", code: "S-110", hex: "#1560BD", brand: "suvinil" },
+      { id: "s111", name: "Azul Capri", code: "S-111", hex: "#00BFFF", brand: "suvinil" },
+      { id: "s112", name: "Azul Prussiano", code: "S-112", hex: "#003153", brand: "suvinil" },
+
+      // Reveste Mais - Azuis
+      { id: "r101", name: "Azul Céu", code: "RMT-101", hex: "#B8D8E8", brand: "reveste-mais" },
+      { id: "r102", name: "Azul Serenidade", code: "RMT-102", hex: "#92A8D1", brand: "reveste-mais" },
+      { id: "r103", name: "Azul Marinho", code: "RMT-103", hex: "#34568B", brand: "reveste-mais" },
+      { id: "r104", name: "Azul Turquesa", code: "RMT-104", hex: "#5BC8AF", brand: "reveste-mais" },
+      { id: "r105", name: "Azul Petróleo", code: "RMT-105", hex: "#0F4C81", brand: "reveste-mais" },
+      { id: "r106", name: "Azul Bebê", code: "RMT-106", hex: "#D4F1F9", brand: "reveste-mais" },
+      { id: "r107", name: "Azul Cobalto", code: "RMT-107", hex: "#1E4D8C", brand: "reveste-mais" },
+      { id: "r108", name: "Azul Índigo", code: "RMT-108", hex: "#4B0082", brand: "reveste-mais" },
+    ],
   },
   {
-    id: 'verdes',
-    name: 'Verdes',
+    id: "verdes",
+    name: "Verdes",
     colors: [
-      { id: 301, name: 'Verde Água', code: 'RMT-201', hex: '#B5EAD7' },
-      { id: 302, name: 'Verde Menta', code: 'RMT-202', hex: '#98D7C2' },
-      { id: 303, name: 'Verde Natureza', code: 'RMT-203', hex: '#88B04B' },
-      { id: 304, name: 'Verde Oliva', code: 'RMT-204', hex: '#5F7A61' },
-      { id: 305, name: 'Verde Musgo', code: 'RMT-205', hex: '#4A5D23' },
-      { id: 306, name: 'Verde Esmeralda', code: 'RMT-206', hex: '#2D5C3E' },
-      { id: 307, name: 'Verde Limão', code: 'RMT-207', hex: '#C5E17A' },
-      { id: 308, name: 'Verde Floresta', code: 'RMT-208', hex: '#1D3E2F' }
-    ]
+      // Coral - Verdes
+      { id: "c201", name: "Verde Água", code: "C-201", hex: "#00FFFF", brand: "coral" },
+      { id: "c202", name: "Verde Menta", code: "C-202", hex: "#98FB98", brand: "coral" },
+      { id: "c203", name: "Verde Claro", code: "C-203", hex: "#90EE90", brand: "coral" },
+      { id: "c204", name: "Verde Limão", code: "C-204", hex: "#32CD32", brand: "coral" },
+      { id: "c205", name: "Verde Grama", code: "C-205", hex: "#228B22", brand: "coral" },
+      { id: "c206", name: "Verde Floresta", code: "C-206", hex: "#228B22", brand: "coral" },
+      { id: "c207", name: "Verde Oliva", code: "C-207", hex: "#808000", brand: "coral" },
+      { id: "c208", name: "Verde Musgo", code: "C-208", hex: "#ADDFAD", brand: "coral" },
+      { id: "c209", name: "Verde Esmeralda", code: "C-209", hex: "#50C878", brand: "coral" },
+      { id: "c210", name: "Verde Bandeira", code: "C-210", hex: "#009739", brand: "coral" },
+      { id: "c211", name: "Verde Jade", code: "C-211", hex: "#00A86B", brand: "coral" },
+      { id: "c212", name: "Verde Abacate", code: "C-212", hex: "#568203", brand: "coral" },
+
+      // Suvinil - Verdes
+      { id: "s201", name: "Verde Natureza", code: "S-201", hex: "#88B04B", brand: "suvinil" },
+      { id: "s202", name: "Verde Água", code: "S-202", hex: "#B5EAD7", brand: "suvinil" },
+      { id: "s203", name: "Verde Menta", code: "S-203", hex: "#98D7C2", brand: "suvinil" },
+      { id: "s204", name: "Verde Pistache", code: "S-204", hex: "#93C572", brand: "suvinil" },
+      { id: "s205", name: "Verde Folha", code: "S-205", hex: "#228B22", brand: "suvinil" },
+      { id: "s206", name: "Verde Militar", code: "S-206", hex: "#4B5320", brand: "suvinil" },
+      { id: "s207", name: "Verde Sage", code: "S-207", hex: "#9CAF88", brand: "suvinil" },
+      { id: "s208", name: "Verde Eucalipto", code: "S-208", hex: "#44825D", brand: "suvinil" },
+      { id: "s209", name: "Verde Petróleo", code: "S-209", hex: "#2F4F2F", brand: "suvinil" },
+      { id: "s210", name: "Verde Amazonas", code: "S-210", hex: "#3B7F70", brand: "suvinil" },
+      { id: "s211", name: "Verde Alface", code: "S-211", hex: "#87A96B", brand: "suvinil" },
+      { id: "s212", name: "Verde Neon", code: "S-212", hex: "#39FF14", brand: "suvinil" },
+
+      // Reveste Mais - Verdes
+      { id: "r201", name: "Verde Água", code: "RMT-201", hex: "#B5EAD7", brand: "reveste-mais" },
+      { id: "r202", name: "Verde Menta", code: "RMT-202", hex: "#98D7C2", brand: "reveste-mais" },
+      { id: "r203", name: "Verde Natureza", code: "RMT-203", hex: "#88B04B", brand: "reveste-mais" },
+      { id: "r204", name: "Verde Oliva", code: "RMT-204", hex: "#5F7A61", brand: "reveste-mais" },
+      { id: "r205", name: "Verde Musgo", code: "RMT-205", hex: "#4A5D23", brand: "reveste-mais" },
+      { id: "r206", name: "Verde Esmeralda", code: "RMT-206", hex: "#2D5C3E", brand: "reveste-mais" },
+      { id: "r207", name: "Verde Limão", code: "RMT-207", hex: "#C5E17A", brand: "reveste-mais" },
+      { id: "r208", name: "Verde Floresta", code: "RMT-208", hex: "#1D3E2F", brand: "reveste-mais" },
+    ],
   },
   {
-    id: 'amarelos',
-    name: 'Amarelos',
+    id: "amarelos",
+    name: "Amarelos",
     colors: [
-      { id: 401, name: 'Amarelo Claro', code: 'RMT-301', hex: '#FFF9C4' },
-      { id: 402, name: 'Amarelo Pastel', code: 'RMT-302', hex: '#FFEE93' },
-      { id: 403, name: 'Amarelo Gema', code: 'RMT-303', hex: '#FFDB58' },
-      { id: 404, name: 'Amarelo Solar', code: 'RMT-304', hex: '#FDDB6D' },
-      { id: 405, name: 'Amarelo Ouro', code: 'RMT-305', hex: '#E6B800' },
-      { id: 406, name: 'Amarelo Mostarda', code: 'RMT-306', hex: '#CDA434' },
-      { id: 407, name: 'Amarelo Âmbar', code: 'RMT-307', hex: '#FFBF00' },
-      { id: 408, name: 'Ocre', code: 'RMT-308', hex: '#CC7722' }
-    ]
+      // Coral - Amarelos
+      { id: "c301", name: "Amarelo Claro", code: "C-301", hex: "#FFFFE0", brand: "coral" },
+      { id: "c302", name: "Amarelo Pastel", code: "C-302", hex: "#FDFD96", brand: "coral" },
+      { id: "c303", name: "Amarelo Canário", code: "C-303", hex: "#FFFF99", brand: "coral" },
+      { id: "c304", name: "Amarelo Ouro", code: "C-304", hex: "#FFD700", brand: "coral" },
+      { id: "c305", name: "Amarelo Mostarda", code: "C-305", hex: "#FFDB58", brand: "coral" },
+      { id: "c306", name: "Amarelo Girassol", code: "C-306", hex: "#FFC512", brand: "coral" },
+      { id: "c307", name: "Amarelo Limão", code: "C-307", hex: "#CCFF00", brand: "coral" },
+      { id: "c308", name: "Amarelo Mel", code: "C-308", hex: "#FFC30B", brand: "coral" },
+      { id: "c309", name: "Amarelo Âmbar", code: "C-309", hex: "#FFBF00", brand: "coral" },
+      { id: "c310", name: "Ocre Amarelo", code: "C-310", hex: "#CC7722", brand: "coral" },
+      { id: "c311", name: "Amarelo Taxi", code: "C-311", hex: "#F1C40F", brand: "coral" },
+      { id: "c312", name: "Amarelo Neon", code: "C-312", hex: "#FFFF00", brand: "coral" },
+
+      // Suvinil - Amarelos
+      { id: "s301", name: "Amarelo Solar", code: "S-301", hex: "#FDDB6D", brand: "suvinil" },
+      { id: "s302", name: "Amarelo Claro", code: "S-302", hex: "#FFF9C4", brand: "suvinil" },
+      { id: "s303", name: "Amarelo Pastel", code: "S-303", hex: "#FFEE93", brand: "suvinil" },
+      { id: "s304", name: "Amarelo Gema", code: "S-304", hex: "#FFDB58", brand: "suvinil" },
+      { id: "s305", name: "Amarelo Ouro", code: "S-305", hex: "#E6B800", brand: "suvinil" },
+      { id: "s306", name: "Amarelo Mostarda", code: "S-306", hex: "#CDA434", brand: "suvinil" },
+      { id: "s307", name: "Amarelo Âmbar", code: "S-307", hex: "#FFBF00", brand: "suvinil" },
+      { id: "s308", name: "Ocre", code: "S-308", hex: "#CC7722", brand: "suvinil" },
+      { id: "s309", name: "Amarelo Banana", code: "S-309", hex: "#FFE135", brand: "suvinil" },
+      { id: "s310", name: "Amarelo Palha", code: "S-310", hex: "#EEE8AA", brand: "suvinil" },
+      { id: "s311", name: "Amarelo Milho", code: "S-311", hex: "#FBEC5D", brand: "suvinil" },
+      { id: "s312", name: "Amarelo Cúrcuma", code: "S-312", hex: "#E4D00A", brand: "suvinil" },
+
+      // Reveste Mais - Amarelos
+      { id: "r301", name: "Amarelo Claro", code: "RMT-301", hex: "#FFF9C4", brand: "reveste-mais" },
+      { id: "r302", name: "Amarelo Pastel", code: "RMT-302", hex: "#FFEE93", brand: "reveste-mais" },
+      { id: "r303", name: "Amarelo Gema", code: "RMT-303", hex: "#FFDB58", brand: "reveste-mais" },
+      { id: "r304", name: "Amarelo Solar", code: "RMT-304", hex: "#FDDB6D", brand: "reveste-mais" },
+      { id: "r305", name: "Amarelo Ouro", code: "RMT-305", hex: "#E6B800", brand: "reveste-mais" },
+      { id: "r306", name: "Amarelo Mostarda", code: "RMT-306", hex: "#CDA434", brand: "reveste-mais" },
+      { id: "r307", name: "Amarelo Âmbar", code: "RMT-307", hex: "#FFBF00", brand: "reveste-mais" },
+      { id: "r308", name: "Ocre", code: "RMT-308", hex: "#CC7722", brand: "reveste-mais" },
+    ],
   },
   {
-    id: 'vermelhos',
-    name: 'Vermelhos',
+    id: "vermelhos",
+    name: "Vermelhos e Rosas",
     colors: [
-      { id: 501, name: 'Rosa Claro', code: 'RMT-401', hex: '#FFD1DC' },
-      { id: 502, name: 'Rosa Antigo', code: 'RMT-402', hex: '#E8B4B8' },
-      { id: 503, name: 'Coral', code: 'RMT-403', hex: '#FF8C69' },
-      { id: 504, name: 'Vermelho Cereja', code: 'RMT-404', hex: '#D2042D' },
-      { id: 505, name: 'Vermelho Paixão', code: 'RMT-405', hex: '#C94C4C' },
-      { id: 506, name: 'Vermelho Vinho', code: 'RMT-406', hex: '#722F37' },
-      { id: 507, name: 'Bordô', code: 'RMT-407', hex: '#5E1914' },
-      { id: 508, name: 'Terracota', code: 'RMT-408', hex: '#A75D5D' }
-    ]
-  }
-];
+      // Coral - Vermelhos
+      { id: "c401", name: "Rosa Claro", code: "C-401", hex: "#FFC0CB", brand: "coral" },
+      { id: "c402", name: "Rosa Bebê", code: "C-402", hex: "#F8BBD9", brand: "coral" },
+      { id: "c403", name: "Rosa Choque", code: "C-403", hex: "#FF1493", brand: "coral" },
+      { id: "c404", name: "Vermelho Cereja", code: "C-404", hex: "#DC143C", brand: "coral" },
+      { id: "c405", name: "Vermelho Sangue", code: "C-405", hex: "#8B0000", brand: "coral" },
+      { id: "c406", name: "Vermelho Ferrari", code: "C-406", hex: "#FF2800", brand: "coral" },
+      { id: "c407", name: "Bordô", code: "C-407", hex: "#800020", brand: "coral" },
+      { id: "c408", name: "Vinho", code: "C-408", hex: "#722F37", brand: "coral" },
+      { id: "c409", name: "Coral", code: "C-409", hex: "#FF7F50", brand: "coral" },
+      { id: "c410", name: "Salmão", code: "C-410", hex: "#FA8072", brand: "coral" },
+      { id: "c411", name: "Magenta", code: "C-411", hex: "#FF00FF", brand: "coral" },
+      { id: "c412", name: "Carmim", code: "C-412", hex: "#960018", brand: "coral" },
+
+      // Suvinil - Vermelhos
+      { id: "s401", name: "Rosa Claro", code: "S-401", hex: "#FFD1DC", brand: "suvinil" },
+      { id: "s402", name: "Rosa Antigo", code: "S-402", hex: "#E8B4B8", brand: "suvinil" },
+      { id: "s403", name: "Coral", code: "S-403", hex: "#FF8C69", brand: "suvinil" },
+      { id: "s404", name: "Vermelho Cereja", code: "S-404", hex: "#D2042D", brand: "suvinil" },
+      { id: "s405", name: "Vermelho Paixão", code: "S-405", hex: "#C94C4C", brand: "suvinil" },
+      { id: "s406", name: "Vermelho Vinho", code: "S-406", hex: "#722F37", brand: "suvinil" },
+      { id: "s407", name: "Bordô", code: "S-407", hex: "#5E1914", brand: "suvinil" },
+      { id: "s408", name: "Terracota", code: "S-408", hex: "#A75D5D", brand: "suvinil" },
+      { id: "s409", name: "Rosa Quartz", code: "S-409", hex: "#F7CAC9", brand: "suvinil" },
+      { id: "s410", name: "Rosa Millennial", code: "S-410", hex: "#F8BBD9", brand: "suvinil" },
+      { id: "s411", name: "Vermelho Cardinal", code: "S-411", hex: "#C41E3A", brand: "suvinil" },
+      { id: "s412", name: "Rubi", code: "S-412", hex: "#E0115F", brand: "suvinil" },
+
+      // Reveste Mais - Vermelhos
+      { id: "r401", name: "Rosa Claro", code: "RMT-401", hex: "#FFD1DC", brand: "reveste-mais" },
+      { id: "r402", name: "Rosa Antigo", code: "RMT-402", hex: "#E8B4B8", brand: "reveste-mais" },
+      { id: "r403", name: "Coral", code: "RMT-403", hex: "#FF8C69", brand: "reveste-mais" },
+      { id: "r404", name: "Vermelho Cereja", code: "RMT-404", hex: "#D2042D", brand: "reveste-mais" },
+      { id: "r405", name: "Vermelho Paixão", code: "RMT-405", hex: "#C94C4C", brand: "reveste-mais" },
+      { id: "r406", name: "Vermelho Vinho", code: "RMT-406", hex: "#722F37", brand: "reveste-mais" },
+      { id: "r407", name: "Bordô", code: "RMT-407", hex: "#5E1914", brand: "reveste-mais" },
+      { id: "r408", name: "Terracota", code: "RMT-408", hex: "#A75D5D", brand: "reveste-mais" },
+    ],
+  },
+  {
+    id: "roxos",
+    name: "Roxos e Violetas",
+    colors: [
+      // Coral - Roxos
+      { id: "c501", name: "Lilás Claro", code: "C-501", hex: "#E6E6FA", brand: "coral" },
+      { id: "c502", name: "Lilás", code: "C-502", hex: "#DDA0DD", brand: "coral" },
+      { id: "c503", name: "Violeta", code: "C-503", hex: "#8A2BE2", brand: "coral" },
+      { id: "c504", name: "Roxo", code: "C-504", hex: "#800080", brand: "coral" },
+      { id: "c505", name: "Roxo Escuro", code: "C-505", hex: "#4B0082", brand: "coral" },
+      { id: "c506", name: "Berinjela", code: "C-506", hex: "#614051", brand: "coral" },
+      { id: "c507", name: "Uva", code: "C-507", hex: "#6F2DA8", brand: "coral" },
+      { id: "c508", name: "Ametista", code: "C-508", hex: "#9966CC", brand: "coral" },
+
+      // Suvinil - Roxos
+      { id: "s501", name: "Lilás Suave", code: "S-501", hex: "#B18FCF", brand: "suvinil" },
+      { id: "s502", name: "Lavanda", code: "S-502", hex: "#E6E6FA", brand: "suvinil" },
+      { id: "s503", name: "Violeta Claro", code: "S-503", hex: "#DDA0DD", brand: "suvinil" },
+      { id: "s504", name: "Roxo Royal", code: "S-504", hex: "#663399", brand: "suvinil" },
+      { id: "s505", name: "Roxo Profundo", code: "S-505", hex: "#4B0082", brand: "suvinil" },
+      { id: "s506", name: "Púrpura", code: "S-506", hex: "#800080", brand: "suvinil" },
+      { id: "s507", name: "Ameixa", code: "S-507", hex: "#8E4585", brand: "suvinil" },
+      { id: "s508", name: "Berinjela", code: "S-508", hex: "#614051", brand: "suvinil" },
+
+      // Reveste Mais - Roxos
+      { id: "r501", name: "Lilás Suave", code: "RMT-501", hex: "#B18FCF", brand: "reveste-mais" },
+      { id: "r502", name: "Lavanda", code: "RMT-502", hex: "#E6E6FA", brand: "reveste-mais" },
+      { id: "r503", name: "Violeta", code: "RMT-503", hex: "#8A2BE2", brand: "reveste-mais" },
+      { id: "r504", name: "Roxo", code: "RMT-504", hex: "#800080", brand: "reveste-mais" },
+    ],
+  },
+  {
+    id: "laranjas",
+    name: "Laranjas",
+    colors: [
+      // Coral - Laranjas
+      { id: "c601", name: "Pêssego", code: "C-601", hex: "#FFCBA4", brand: "coral" },
+      { id: "c602", name: "Laranja Claro", code: "C-602", hex: "#FFB347", brand: "coral" },
+      { id: "c603", name: "Laranja", code: "C-603", hex: "#FFA500", brand: "coral" },
+      { id: "c604", name: "Laranja Escuro", code: "C-604", hex: "#FF8C00", brand: "coral" },
+      { id: "c605", name: "Tangerina", code: "C-605", hex: "#FF6347", brand: "coral" },
+      { id: "c606", name: "Abóbora", code: "C-606", hex: "#FF7518", brand: "coral" },
+      { id: "c607", name: "Cobre", code: "C-607", hex: "#B87333", brand: "coral" },
+      { id: "c608", name: "Ferrugem", code: "C-608", hex: "#B7410E", brand: "coral" },
+
+      // Suvinil - Laranjas
+      { id: "s601", name: "Pêssego", code: "S-601", hex: "#FFCBA4", brand: "suvinil" },
+      { id: "s602", name: "Laranja Suave", code: "S-602", hex: "#FFB347", brand: "suvinil" },
+      { id: "s603", name: "Laranja Vibrante", code: "S-603", hex: "#FFA500", brand: "suvinil" },
+      { id: "s604", name: "Laranja Queimado", code: "S-604", hex: "#CC5500", brand: "suvinil" },
+      { id: "s605", name: "Papaia", code: "S-605", hex: "#FFEFD5", brand: "suvinil" },
+      { id: "s606", name: "Damasco", code: "S-606", hex: "#FBCEB1", brand: "suvinil" },
+      { id: "s607", name: "Cenoura", code: "S-607", hex: "#ED9121", brand: "suvinil" },
+      { id: "s608", name: "Tijolo", code: "S-608", hex: "#CB4154", brand: "suvinil" },
+
+      // Reveste Mais - Laranjas
+      { id: "r601", name: "Pêssego", code: "RMT-601", hex: "#FFCBA4", brand: "reveste-mais" },
+      { id: "r602", name: "Laranja Claro", code: "RMT-602", hex: "#FFB347", brand: "reveste-mais" },
+      { id: "r603", name: "Laranja", code: "RMT-603", hex: "#FFA500", brand: "reveste-mais" },
+      { id: "r604", name: "Tangerina", code: "RMT-604", hex: "#FF6347", brand: "reveste-mais" },
+    ],
+  },
+]

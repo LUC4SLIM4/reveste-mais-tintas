@@ -1,19 +1,39 @@
-import React from 'react';
-import styles from './ColorSwatch.module.css';
+"use client"
 
-const ColorSwatch = ({ color, name, code }) => {
+import { useState } from "react"
+import styles from "./ColorSwatch.module.css"
+
+const ColorSwatch = ({ color, name, code, brand }) => {
+  const [copied, setCopied] = useState(false)
+
+  const handleCopyHex = () => {
+    navigator.clipboard.writeText(color)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
   return (
     <div className={styles.colorSwatch}>
-      <div 
-        className={styles.colorBox} 
+      <div
+        className={styles.colorBox}
         style={{ backgroundColor: color }}
-      ></div>
+        onClick={handleCopyHex}
+        title="Clique para copiar código HEX"
+      >
+        <div className={styles.colorOverlay}>
+          <span className={styles.copyText}>{copied ? "Copiado!" : "Copiar HEX"}</span>
+        </div>
+      </div>
+
       <div className={styles.colorInfo}>
-        <span className={styles.colorName}>{name}</span>
-        <span className={styles.colorCode}>{code}</span>
+        <h3 className={styles.colorName}>{name}</h3>
+        <p className={styles.colorCode}>{code}</p>
+        <p className={styles.colorHex}>{color}</p>
+        <div className={styles.brandInfo}>
+        </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ColorSwatch;
+export default ColorSwatch

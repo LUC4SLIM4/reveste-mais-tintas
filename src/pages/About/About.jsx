@@ -8,7 +8,8 @@ import {
   FiStar,
   FiTarget,
   FiCheckCircle,
-  FiArrowRight,
+  FiMapPin,
+  FiPhone,
 } from "react-icons/fi"
 import styles from "./About.module.css"
 
@@ -18,36 +19,52 @@ const About = () => {
       year: "2013",
       title: "Fundação da Reveste Mais Tintas",
       description:
-        "A Reveste Mais Tintas e Revestimentos Acrílicos Ltda. foi fundada em Patos de Minas (MG) em 14 de junho de 2013 . Desde a abertura já é registrada como microempresa, atuando na fabricação de tintas e revestimentos acrílicos para pintura residencial e comercial.",
-      image: "/placeholder.svg?height=300&width=400",
+        "A Reveste Mais Tintas e Revestimentos Acrílicos Ltda. foi fundada em Patos de Minas (MG) em 14 de junho de 2013. Desde a abertura já é registrada como microempresa, atuando na fabricação de tintas e revestimentos acrílicos para pintura residencial e comercial.",
+      image: "/storefront-1.png",
     },
     {
       year: "2018",
       title: "Filial em Tiros",
       description:
         "Em 27 de agosto de 2018, a Reveste Mais inaugurou sua primeira filial fora de Patos de Minas, no município de Tiros (MG). Essa expansão física ampliou a atuação da empresa no Triângulo Mineiro.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/storefront-2.png",
     },
     {
       year: "2021",
       title: "Renovação de Licença",
       description:
-        "Em 17 de novembro de 2021 a Reveste Mais obteve a renovação de sua Licença Ambiental Simplificada (LAS) para operação industrial. Essa licença concedida pelo órgão ambiental de Minas Gerais renova a autorização para fabricação de produtos químicos (tintas e revestimentos) e é válida por 10 anos, reforçando o compromisso da empresa com normas ambientais.",
-      image: "/placeholder.svg?height=300&width=400",
+        "Em 17 de novembro de 2021 a Reveste Mais obteve a renovação de sua Licença Ambiental Simplificada (LAS) para operação industrial. Essa licença concedida pelo órgão ambiental de Minas Gerais renova a autorização para fabricação de produtos químicos (tintas e revestimentos) e é válida por 10 anos.",
+      image: "/products-standard.png",
     },
     {
       year: "2023",
       title: "Transformação Digital",
       description:
-        "Nos últimos anos a empresa ampliou sua presença digital e diversificou seus produtos. Mantém loja oficial no Mercado Livre, com vendas para todo o país. Dentre as inovações em produtos próprios destacam-se linhas de impermeabilizantes e revestimentos decorativos. Por exemplo, a Linha Imperflex traz impermeabilizantes elásticos (para piscinas e lajes) que protegem contra infiltraçõe e para paredes externas, eficazes contra fissuras causadas pela chuva. Outro produto é o Impermeabilizante Veda Mais, à base de resina acrílica branca, ideal contra batidas de chuva em telhados e superfícies externas. A empresa também comercializa revestimentos texturizados como o “Pedras Naturais” (revestimento acrílico texturizado com estética de pedras naturais, que confere acabamento sofisticado aos ambientes). Além disso, oferece diversas linhas de tintas látex econômicas e acabamento semibrilho para interiores.",
- image: "/placeholder.svg?height=300&width=400",
+        "Nos últimos anos a empresa ampliou sua presença digital e diversificou seus produtos. Mantém loja oficial no Mercado Livre, com vendas para todo o país. Dentre as inovações em produtos próprios destacam-se linhas de impermeabilizantes e revestimentos decorativos.",
+      image: "/color-samples.png",
     },
     {
       year: "2025",
       title: "Liderança Regional Consolidada",
       description:
-        "Atualmente a Reveste Mais continua atuando como microempresa em Patos de Minas, com matriz e filial em Tiros. A classificação de microempresa indica que possui até 19 funcionários. A empresa atende clientes residenciais e comerciais da região, mantendo foco em qualidade e inovação. Em linha com a sustentabilidade, mantém sua licença ambiental regularizada e segue desenvolvendo produtos cada vez mais modernos para o mercado de tintas e revestimentos.",
-      image: "/placeholder.svg?height=300&width=400",
+        "Atualmente a Reveste Mais continua atuando como microempresa em Patos de Minas, com matriz e filial em Tiros. A empresa atende clientes residenciais e comerciais da região, mantendo foco em qualidade e inovação.",
+      image: "/products-economica.png",
+    },
+  ]
+
+  const productLines = [
+    {
+      title: "Linha Standard",
+      description:
+        "Nossa linha premium com alta qualidade e durabilidade para projetos que exigem o melhor acabamento.",
+      image: "/products-standard.png",
+      features: ["Alta cobertura", "Resistência superior", "Acabamento profissional"],
+    },
+    {
+      title: "Linha Econômica",
+      description: "Qualidade acessível sem abrir mão da performance, ideal para grandes áreas e projetos econômicos.",
+      image: "/products-economica.png",
+      features: ["Ótimo custo-benefício", "Fácil aplicação", "Variedade de cores"],
     },
   ]
 
@@ -56,36 +73,25 @@ const About = () => {
       icon: <FiShield />,
       title: "Fabricação Própria",
       description:
-        "Desde o início, optamos por produzir nossos próprios produtos, garantindo controle total sobre a qualidade, os processos e os prazos. Isso nos permite oferecer tintas e revestimentos com alto padrão técnico, adaptados às necessidades do nosso público.",
-      image: "/placeholder.svg?height=250&width=350",
+        "Desde o início, optamos por produzir nossos próprios produtos, garantindo controle total sobre a qualidade, os processos e os prazos.",
     },
     {
       icon: <FiUsers />,
       title: "Atendimento Humanizado",
       description:
-        "Nossa equipe é treinada para oferecer um atendimento próximo, atencioso e personalizado. Valorizamos cada cliente e buscamos entender seu projeto para oferecer as melhores soluções com empatia, clareza e comprometimento.",
-      image: "/placeholder.svg?height=250&width=350",
+        "Nossa equipe é treinada para oferecer um atendimento próximo, atencioso e personalizado. Valorizamos cada cliente e buscamos entender seu projeto.",
     },
     {
       icon: <FiTrendingUp />,
       title: "Presença Regional Forte",
       description:
-        "Com sede em Patos de Minas e filial em Tiros, ampliamos nossa atuação no Alto Paranaíba com agilidade logística e profundo conhecimento do mercado local. Atendemos com eficiência tanto consumidores finais quanto empresas da construção civil.",
-      image: "/placeholder.svg?height=250&width=350",
-    },
-    {
-      icon: <FiHeart />,
-      title: "Compromisso com a Qualidade",
-      description:
-        "Selecionamos cuidadosamente nossas matérias-primas e seguimos rigorosos padrões de produção. Cada lote passa por controle interno de qualidade para garantir desempenho, aderência, cobertura e durabilidade superiores.",
-      image: "/placeholder.svg?height=250&width=350",
+        "Com sede em Patos de Minas e filial em Tiros, ampliamos nossa atuação no Alto Paranaíba com agilidade logística e profundo conhecimento do mercado local.",
     },
     {
       icon: <FiAward />,
-      title: "Soluções para Ambientes Internos e Externos",
+      title: "Soluções Completas",
       description:
-        "Desenvolvemos produtos específicos para diferentes superfícies e ambientes. Nossas tintas e revestimentos são indicados tanto para áreas internas quanto externas, oferecendo proteção, acabamento impecável e estética de alto impacto.",
-      image: "/placeholder.svg?height=250&width=350",
+        "Desenvolvemos produtos específicos para diferentes superfícies e ambientes, oferecendo proteção, acabamento impecável e estética de alto impacto.",
     },
   ]
 
@@ -94,37 +100,51 @@ const About = () => {
       name: "Roberta Lívia Lima de Souza",
       position: "Sócia-Fundadora e Administradora",
       description:
-        "Também graduada em Farmácia pelo UNIPAM, Roberta traz sua expertise técnica para garantir o rigor no controle de qualidade e na produção das tintas e revestimentos. Desde a fundação da empresa, atua diretamente na gestão comercial e na supervisão das operações, contribuindo para a excelência dos processos e para o fortalecimento do relacionamento com clientes e parceiros. Juntas, Patrícia e Roberta impulsionam a Reveste Mais Tintas com comprometimento, visão empreendedora e foco em inovação, consolidando a empresa como um dos principais nomes do setor na região de Patos de Minas/MG.",
-      image: "/roberta.jpg?height=400&width=300",
+        "Graduada em Farmácia pelo UNIPAM, Roberta traz sua expertise técnica para garantir o rigor no controle de qualidade e na produção das tintas e revestimentos. Atua diretamente na gestão comercial e na supervisão das operações.",
+      image: "/roberta.jpg",
     },
     {
       name: "Patrícia Emiliane da Silva Lima",
-      position: "Sócia-Fundadora e Administrador",
+      position: "Sócia-Fundadora e Administradora",
       description:
-        "Formada em Farmácia pelo Centro Universitário de Patos de Minas (UNIPAM), Patrícia é uma das fundadoras da Reveste Mais Tintas, criada em 2013. Com ampla experiência no setor químico, ela atua na gestão estratégica e administrativa da empresa, sendo responsável por consolidar a marca no mercado regional como referência em qualidade e inovação. Seu olhar atento ao desenvolvimento de produtos e à sustentabilidade tem sido essencial para o crescimento sólido da empresa.",
-      image: "/patricia.png?height=400&width=300",
+        "Formada em Farmácia pelo UNIPAM, Patrícia é uma das fundadoras da Reveste Mais Tintas. Com ampla experiência no setor químico, atua na gestão estratégica e administrativa da empresa, consolidando a marca no mercado regional.",
+      image: "/patricia.png",
     },
   ]
 
   const stats = [
-    { number: "15+", label: "Anos de Experiência", description: "Mais de uma década transformando ambientes" },
-    { number: "50k+", label: "Clientes Satisfeitos", description: "Famílias e empresas que confiam em nós" },
+    { number: "12+", label: "Anos de Experiência", description: "Mais de uma década transformando ambientes" },
+    { number: "10k+", label: "Clientes Satisfeitos", description: "Famílias e empresas que confiam em nós" },
     { number: "200+", label: "Cores Disponíveis", description: "Paleta completa para todos os gostos" },
-    { number: "98%", label: "Satisfação do Cliente", description: "Índice de satisfação comprovado" },
+    { number: "2", label: "Unidades", description: "Patos de Minas e Tiros" },
   ]
 
   return (
     <div className={styles.aboutPage}>
-      {/* Hero Section */}
+      {/* Hero Section with Storefront */}
       <section className={styles.hero}>
         <div className={styles.container}>
           <div className={styles.heroContent}>
-            <h1>Sobre a Reveste Mais Tintas</h1>
-            <p>
-              Há mais de 15 anos transformando ambientes e realizando sonhos através das cores. Conheça nossa história,
-              nossos valores e o compromisso que nos move todos os dias: oferecer produtos de excelência que inspiram e
-              transformam espaços.
-            </p>
+            <div className={styles.heroText}>
+              <h1>Reveste Mais Tintas</h1>
+              <p>
+                Há mais de 12 anos transformando ambientes e realizando sonhos através das cores. Fabricação própria,
+                qualidade garantida e atendimento personalizado no coração de Minas Gerais.
+              </p>
+              <div className={styles.heroStats}>
+                <div className={styles.heroStat}>
+                  <FiMapPin />
+                  <span>Patos de Minas & Tiros - MG</span>
+                </div>
+                <div className={styles.heroStat}>
+                  <FiPhone />
+                  <span>(34) 3822-4410</span>
+                </div>
+              </div>
+            </div>
+            <div className={styles.heroImage}>
+              <img src="/storefront-1.png" alt="Fachada da Reveste Mais Tintas" />
+            </div>
           </div>
         </div>
       </section>
@@ -144,41 +164,37 @@ const About = () => {
         </div>
       </section>
 
-      {/* Company Story Section */}
-      <section className={styles.storySection}>
+      {/* Products Showcase */}
+      
+      {/* Color Selection Section */}
+      <section className={styles.colorSection}>
         <div className={styles.container}>
-          <div className={styles.storyContent}>
-            <div className={styles.storyText}>
-              <h2>Nossa História</h2>
+          <div className={styles.colorContent}>
+            <div className={styles.colorText}>
+              <h2>Mais de 200 Cores Disponíveis</h2>
               <p>
-                A Reveste Mais Tintas nasceu em 2013 do sonho de duas empreendedoras mineiras,
-                Patrícia Emiliane e Roberta Lívia, determinadas a transformar o mercado de tintas com produtos
-                de qualidade e atendimento diferenciado. Tudo começou em Patos de Minas, em uma estrutura
-                modesta, mas com um propósito ousado: fabricar tintas acrílicas que unissem tecnologia,
-                durabilidade e beleza.
+                Nossa ampla cartela de cores oferece opções para todos os gostos e projetos. Utilizamos tecnologia
+                avançada para garantir precisão na mistura e consistência nas cores, proporcionando o resultado perfeito
+                para seu ambiente.
               </p>
-              <p>
-                Nos primeiros anos, os desafios foram grandes. Enfrentar concorrentes consolidados exigiu
-                resiliência e visão estratégica. Apostamos na fabricação própria, no relacionamento próximo
-                com os clientes e no compromisso com a excelência em cada produto entregue. Aos poucos,
-                conquistamos a confiança do mercado regional.
-              </p>
-              <p>
-                O grande marco veio em 2018, com a abertura da nossa primeira filial na cidade de Tiros-MG.
-                Esse passo foi fundamental para expandir nossa presença e reafirmar nosso propósito de levar
-                mais cor e qualidade para os lares e obras da região.
-              </p>
-              <p>
-                Hoje, mais de uma década depois, a Reveste Mais é reconhecida como referência na fabricação
-                de tintas e revestimentos acrílicos, com uma estrutura sólida, produção local e uma equipe
-                comprometida com o que faz. Mas nossa essência continua a mesma: acreditar que cada parede
-                pintada pode contar uma história — e a nossa é feita de dedicação, inovação e paixão pelas
-                cores.
-              </p>
+              <div className={styles.colorFeatures}>
+                <div className={styles.colorFeature}>
+                  <FiStar />
+                  <span>Cores personalizadas</span>
+                </div>
+                <div className={styles.colorFeature}>
+                  <FiShield />
+                  <span>Consistência garantida</span>
+                </div>
+                <div className={styles.colorFeature}>
+                  <FiHeart />
+                  <span>Consultoria especializada</span>
+                </div>
+              </div>
             </div>
-            <div className={styles.storyImage}>
-              <img src="/placeholder.svg?height=600&width=500" alt="Nossa primeira loja em 2008" />
-              <div className={styles.imageCaption}>Nossa primeira loja em 2008 - onde tudo começou</div>
+            <div className={styles.colorImages}>
+              <img src="/color-samples.png" alt="Amostras de cores" />
+              <img src="/catalog.png" alt="Catálogo de cores" />
             </div>
           </div>
         </div>
@@ -194,10 +210,9 @@ const About = () => {
               </div>
               <h3>Missão</h3>
               <p>
-                Produzir e comercializar tintas e revestimentos com excelência, oferecendo soluções
-                que unem qualidade, durabilidade e beleza. Valorizamos o atendimento próximo e confiável,
-                buscando sempre superar as expectativas dos nossos clientes e contribuir para a
-                transformação de ambientes com cor, segurança e tecnologia.
+                Produzir e comercializar tintas e revestimentos com excelência, oferecendo soluções que unem qualidade,
+                durabilidade e beleza. Valorizamos o atendimento próximo e confiável, buscando sempre superar as
+                expectativas dos nossos clientes.
               </p>
             </div>
             <div className={styles.valueCard}>
@@ -206,10 +221,9 @@ const About = () => {
               </div>
               <h3>Visão</h3>
               <p>
-                Ser referência em tintas e revestimentos no estado de Minas Gerais até 2030, 
-                reconhecida pela fabricação própria, atendimento humanizado e compromisso com a 
-                inovação. Expandir nossa atuação no interior mineiro com responsabilidade e qualidade,
-                fortalecendo parcerias duradouras e sustentáveis.
+                Ser referência em tintas e revestimentos no estado de Minas Gerais até 2030, reconhecida pela fabricação
+                própria, atendimento humanizado e compromisso com a inovação. Expandir nossa atuação no interior mineiro
+                com responsabilidade e qualidade.
               </p>
             </div>
             <div className={styles.valueCard}>
@@ -234,14 +248,6 @@ const About = () => {
                   <FiCheckCircle />
                   <span>Responsabilidade ambiental</span>
                 </div>
-                <div className={styles.valueItem}>
-                  <FiCheckCircle />
-                  <span>Ética e integridade</span>
-                </div>
-                <div className={styles.valueItem}>
-                  <FiCheckCircle />
-                  <span>Valorização da comunidade</span>
-                </div>
               </div>
             </div>
           </div>
@@ -254,22 +260,17 @@ const About = () => {
           <div className={styles.sectionHeader}>
             <h2>Nossos Diferenciais</h2>
             <p>
-              Descubra o que torna a Reveste Mais única e por que somos referência em tintas e 
-              revestimentos acrílicos no interior de Minas Gerais.
+              Descubra o que torna a Reveste Mais única e por que somos referência em tintas e revestimentos acrílicos
+              no interior de Minas Gerais.
             </p>
           </div>
 
-          <div className={styles.differentialsContainer}>
+          <div className={styles.differentialsGrid}>
             {differentials.map((differential, index) => (
-              <div key={index} className={styles.differentialItem}>
-                <div className={styles.differentialImage}>
-                  <img src={differential.image || "/placeholder.svg"} alt={differential.title} />
-                  <div className={styles.differentialIcon}>{differential.icon}</div>
-                </div>
-                <div className={styles.differentialContent}>
-                  <h3>{differential.title}</h3>
-                  <p>{differential.description}</p>
-                </div>
+              <div key={index} className={styles.differentialCard}>
+                <div className={styles.differentialIcon}>{differential.icon}</div>
+                <h3>{differential.title}</h3>
+                <p>{differential.description}</p>
               </div>
             ))}
           </div>
@@ -280,11 +281,10 @@ const About = () => {
       <section className={styles.timelineSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <h2>Fabricação Própria</h2>
+            <h2>Nossa Trajetória</h2>
             <p>
-              Desde o início, optamos por produzir nossos próprios produtos, garantindo controle 
-              total sobre a qualidade, os processos e os prazos. Isso nos permite oferecer tintas 
-              e revestimentos com alto padrão técnico, adaptados às necessidades do nosso público.
+              Conheça os principais marcos da nossa história e como chegamos até aqui com dedicação, qualidade e
+              inovação constante.
             </p>
           </div>
 
@@ -312,8 +312,8 @@ const About = () => {
       <section className={styles.teamSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <h2>Sócios, fundadoras da Reveste Mais Tintas</h2>
-            <p>Conheça as pessoas apaixonadas e talentosas que fazem a Reveste Mais Tintas acontecer todos os dias</p>
+            <h2>Fundadoras da Reveste Mais Tintas</h2>
+            <p>Conheça as empreendedoras que transformaram um sonho em realidade</p>
           </div>
 
           <div className={styles.teamGrid}>
@@ -329,6 +329,41 @@ const About = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Location Section */}
+      <section className={styles.locationSection}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
+            <h2>Nossas Unidades</h2>
+            <p>Visite nossas lojas em Patos de Minas e Tiros para conhecer nossos produtos de perto</p>
+          </div>
+
+          <div className={styles.locationsGrid}>
+            <div className={styles.locationCard}>
+              <img src="/storefront-2.png" alt="Loja Patos de Minas" />
+              <div className={styles.locationInfo}>
+                <h3>Matriz - Patos de Minas</h3>
+                <p>Nossa unidade principal com showroom completo e fábrica</p>
+                <div className={styles.locationContact}>
+                  <FiPhone />
+                  <span>(34) 3822-4410</span>
+                </div>
+              </div>
+            </div>
+            <div className={styles.locationCard}>
+              <img src="/storefront-3.png" alt="Loja Tiros" />
+              <div className={styles.locationInfo}>
+                <h3>Filial - Tiros</h3>
+                <p>Nossa segunda unidade atendendo a região com agilidade</p>
+                <div className={styles.locationContact}>
+                  <FiMapPin />
+                  <span>Tiros - MG</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
