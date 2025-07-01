@@ -164,8 +164,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Products Showcase */}
-      
       {/* Color Selection Section */}
       <section className={styles.colorSection}>
         <div className={styles.container}>
