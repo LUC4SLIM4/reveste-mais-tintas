@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://revestemaistintas.com.br/sitemap.xml
