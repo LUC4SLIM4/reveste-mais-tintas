@@ -16,7 +16,7 @@ const Home = () => {
         title="Transforme seu ambiente com cores que inspiram"
         subtitle="Descubra a qualidade e durabilidade das tintas Reveste Mais"
         ctaText="Conheça nossos produtos"
-        ctaLink="/produtos"
+        ctaLink="/nossas-tintas"
         video={videoLoja}
       />
 
