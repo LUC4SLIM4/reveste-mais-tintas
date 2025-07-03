@@ -30,7 +30,7 @@ const Home = () => {
               <h2>Reveste Mais Tintas</h2>
               <p className={styles.aboutSubtitle}>Qualidade e inovação em cada pincelada</p>
               <p>
-                Há mais de 15 anos no mercado, a Reveste Mais Tintas se destaca pela excelência em produtos para pintura
+                Há mais de 12 anos no mercado, a Reveste Mais Tintas se destaca pela excelência em produtos para pintura
                 residencial e comercial. Nosso compromisso é oferecer tintas de alta qualidade, com cores vibrantes e
                 duradouras, que transformam ambientes e valorizam seu imóvel.
               </p>
