@@ -313,7 +313,7 @@ const CopyElasticor = () => {
               ✕
             </button>
             <video controls autoPlay className={styles.video}>
-              <source src="/elasticorML.MOV" type="video/mp4" />
+              <source src="/elasticorajustado.mp4" type="video/mp4" />
               Seu navegador não suporta vídeos.
             </video>
           </div>
