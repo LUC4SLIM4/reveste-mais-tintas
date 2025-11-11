@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './layouts/Header/Header';
 import Footer from './layouts/Footer/Footer';
 import Home from './pages/Home/Home';
@@ -10,12 +10,16 @@ import Contact from './pages/Contact/Contact';
 import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
 import BlogPost from './pages/BlogPost/BlogPost';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import CopyElasticor from './pages/Copy/copyelasticor';
 
 function App() {
+  const location = useLocation();
+  const isCopyPage = location.pathname === '/copy';
+
   return (
     <div className="app">
       <ScrollToTop/>
-      <Header />
+      {!isCopyPage && <Header />}
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,10 +29,11 @@ function App() {
           <Route path="blog/:slug" element={<BlogPost />} />
           <Route path="/sobre" element={<About />} />
           <Route path="/contato" element={<Contact />} />
+          <Route path="/copy" element={<CopyElasticor />} />
         </Routes>
       </main>
-      <Footer />
-      <WhatsAppButton />
+      {!isCopyPage && <Footer />}
+      {!isCopyPage && <WhatsAppButton />}
     </div>
   );
 }
