@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Arquivos de vídeo grandes
+*.mov
+*.MOV
+*.mp4
+*.MP4
+*.avi
+*.AVI
