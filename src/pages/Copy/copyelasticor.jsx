@@ -296,7 +296,7 @@ const CopyElasticor = () => {
             </div>
             <div className={styles.footerContato}>
               <p>📞 (34) 3822-4410</p>
-              <p>📍 Avenida Deputado Binga, 82 - Cidade Patos De Minas, Minas Gerais</p>
+              <p>📍 Avenida Deputado Binga, 682 - Cidade Patos De Minas, Minas Gerais</p>
             </div>
           </div>
           <div className={styles.footerBottom}>
